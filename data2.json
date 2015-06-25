@@ -1,0 +1,34 @@
+{
+    "xcitem": [{
+        "title": "",
+        "love": 20,
+        "img": "img/img1/x11.jpg",
+        "src":"album1.html"
+
+    }, {
+        "title": "手工艺品",
+        "love": 20,
+        "img": "img/img2/x21.jpg",
+        "src":"album2.html"
+    }, {
+        "title": "校园歌手大赛",
+        "love": 20,
+        "img": "img/img3/x31.jpg",
+        "src":"album3.html"
+    }, {
+        "title": "文艺生活",
+        "love": 20,
+        "img": "img/img4/x41.jpg",
+        "src":"album4.html"
+    }, {
+        "title": "小雪的菜单",
+        "love": 20,
+        "img": "img/img5/x51.jpg",
+        "src":"album5.html"
+    }, {
+        "title": "毕业纪念册",
+        "love": 20,
+        "img": "img/img6/x61.jpg",
+        "src":"album6.html"
+    }]
+}

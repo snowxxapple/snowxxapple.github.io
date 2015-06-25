@@ -1,0 +1,34 @@
+{
+    "item": [{
+        "title": "周末",
+        "love": 30,
+        "img": "img/img7/x72.jpg",
+        "src":"album7.html"
+    }, {
+        "title": "我和星星",
+        "love": 30,
+        "img": "img/img8/x84.jpg",
+        "src":"album8.html"
+    }, {
+        "title": "It's me",
+        "love": 30,
+        "img": "img/img9/x92.jpg",
+        "src":"album9.html"
+    }, {
+        "title": "me",
+        "love": 30,
+        "img": "img/img9/x91.jpg",
+        "src":"album10.html"
+    }, {
+        "title": "me",
+        "love": 30,
+        "img": "img/img9/x95.jpg",
+        "src":"album11.html"
+    }, {
+        "title": "me",
+        "love": 30,
+        "img": "img/img9/x912.jpg",
+        "src":"album12.html"
+    }]
+
+} 

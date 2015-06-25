@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>我的相册>彩铅</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    .righticon {
+        margin-top: 18px;
+    }
+    
+    .box1 {
+        width: 100%;
+        height: 749px;
+        margin: 0px;
+        padding: 0px;
+        z-index: -1;
+        background: url(img/b4.jpg);
+    }
+    
+    .xpsize {
+        height: 250px;
+        width: 400px;
+        overflow: hidden;
+    }
+    a{cursor: pointer;}
+    </style>
+</head>
+
+<body style='padding-top:50px;'>
+    <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
+        <div class="container">
+            <div class='navbar-header' style='width:150px;'>
+                <img src="img/1.jpg" class='img-circle navbar-brand' style='padding:0px'>
+                <p style='margin-top:15px;'>小雪喜欢下雪天</p>
+            </div>
+            <ul class='nav navbar-nav pull-right'>
+                <li><a href="xxblog.html">首页</a></li>
+                <li><span class="glyphicon glyphicon-menu-right righticon"></span></li>
+                <li><a href="xxblog.html#life1">爱生活</a></li>
+                <li><span class="glyphicon glyphicon-menu-right righticon"></span></li>
+                <li><a href="picture.html">我的相册</a></li>
+                <li><span class="glyphicon glyphicon-menu-right righticon"></span></li>
+                <li><a><strong>It's me</strong></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="box1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2 style='margin:5px;margin-top:10px;'><strong>It's me</strong><small><a href="picture.html" style='margin-left:10px;'>返回</a></small></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <div class='xpsize'>
+                            <img src="img/img9/x91.jpg" class='zpkong'>
+                        </div>
+                        <div class="caption">
+                            <span>蛋糕</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <div class='xpsize'>
+                            <img src="img/img9/x92.jpg" class='zpkong'>
+                        </div>
+                        <div class="caption">
+                            <span>蛋糕</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <div class='xpsize'>
+                            <img src="img/img9/x93.jpg" class='zpkong'>
+                        </div>
+                        <div class="caption">
+                            <span>蛋糕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail"  style='margin-bottom:5px;'>
+                        <div class='xpsize'>
+                            <img src="img/img9/x94.jpg" class='zpkong'>
+                        </div>
+                        <div class="caption">
+                            <span>蛋糕</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail" style='margin-bottom:5px;'>
+                        <div class='xpsize'>
+                            <img src="img/img9/x95.jpg" class='zpkong'>
+                        </div>
+                        <div class="caption">
+                            <span>蛋糕</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail" style='margin-bottom:5px;'>
+                        <div class='xpsize'>
+                            <img src="img/img9/x96.jpg" class='zpkong'>
+                        </div>
+                        <div class="caption">
+                            <span>蛋糕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <ul class='pager'>
+                <li style='margin-right:20px;'><a id='up'>上一页</a></li>
+                <li style='margin-left:20px;'><a id='down'>下一页</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+   $('#down').click(function(event) {
+    $.getJSON('meone2.json', function(json, textStatus) {
+        
+        // for (var i = json.item.length - 1; i >= 0; i--) {
+        //    // $('.list-group').('list-group-item').eq(1).('h5').('a')=item[i].title;
+        //    console.log($(".list-group>list-group-item[1]"));
+        // };
+        $.each(json.meone2, function(index, val) {
+            /* iterate through array or object */
+
+            
+            $('.caption>span').eq(index).html(val.title);
+            $('.zpkong').eq(index).attr("src", val.img);
+        });
+    });
+});
+   $('#up').click(function(event) {
+    $.getJSON('meone1.json', function(json, textStatus) {
+        
+        // for (var i = json.item.length - 1; i >= 0; i--) {
+        //    // $('.list-group').('list-group-item').eq(1).('h5').('a')=item[i].title;
+        //    console.log($(".list-group>list-group-item[1]"));
+        // };
+        $.each(json.meone1, function(index, val) {
+            /* iterate through array or object */
+
+            
+            $('.caption>span').eq(index).html(val.title);
+            $('.zpkong').eq(index).attr("src", val.img);
+        });
+    });
+});
+
+</script>
+</html>

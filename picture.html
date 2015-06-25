@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>我的相册</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    .righticon {
+        margin-top: 18px;
+    }
+    
+    .box1 {
+        width: 100%;
+        height: 749px;
+        margin: 0px;
+        padding: 0px;
+        z-index: -1;
+        background: url(img/b4.jpg);
+    }
+    
+    html {
+        overflow-x: hidden;
+    }
+    
+    .love {
+        color: pink;
+    }
+    
+    .lovenum {
+        color: pink;
+        margin-left: 5px;
+    }
+    
+    .xpsize {
+        height: 270px;
+        width: 252px;
+        overflow: hidden;
+    }
+    
+    .sbj {
+        padding-top: 30px;
+    }
+    
+    .xclove {
+        color: pink;
+        margin-left: 5px;
+    }
+    
+    .thumb {}
+    
+    .xclove2 {
+        color: pink;
+    }
+    
+    a {
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body style='padding-top:50px;'>
+    <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
+        <div class="container">
+            <div class='navbar-header' style='width:150px;'>
+                <img src="img/1.jpg" class='img-circle navbar-brand' style='padding:0px'>
+                <p style='margin-top:15px;'>小雪喜欢下雪天</p>
+            </div>
+            <ul class='nav navbar-nav pull-right'>
+                <li><a href="xxblog.html">首页</a></li>
+                <li><span class="glyphicon glyphicon-menu-right righticon"></span></li>
+                <li><a href="xxblog.html#life1">爱生活</a></li>
+                <li><span class="glyphicon glyphicon-menu-right righticon"></span></li>
+                <li><a><strong>我的相册</strong></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class='box1'>
+        <div class='container'>
+
+            <div class="row">
+                <div class="col-md-2 sbj" style='padding-left:0px;padding-right:0px;'>
+                    <ul class="list-group" style='text-align:center;'>
+                        <li class='list-group-item'>
+                            
+                            <h5><strong>相册列表</strong><span class='badge' style='background:#cce;margin-left:10px;'>6</span></h5></li>
+                        <li class="list-group-item">
+                            <span>
+                            <a href="album1.html" class='kong'>彩铅</a>
+                        </span><span class='lovenum pull-right'>20</span>
+                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>
+                            <a href="album2.html" class='kong'>手工艺品</a>
+                        </span>
+                            <span class='lovenum pull-right'>20</span>
+                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>
+                            <a href="album3.html" class='kong'>校园歌手大赛</a>
+                        </span>
+                            <span class='lovenum pull-right'>20</span>
+                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>
+                            <a href="album4.html" class='kong'>文艺生活</a>
+                        </span>
+                            <span class='lovenum pull-right'>20</span>
+                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>
+                            <a href="album5.html" class='kong'>小雪的菜单</a>
+                        </span>
+                            <span class='lovenum pull-right'>20</span>
+                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                        </li>
+                        <li class="list-group-item">
+                            <span>
+                            <a href="album6.html" class='kong'>毕业纪念册</a>
+                        </span>
+                            <span class='lovenum pull-right'>20</span>
+                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                        </li>
+                        <li class='list-group-item' style='height:57px;'>
+                            <ul class='pager' style='margin-top:2px;'>
+                                <li><a id='up' class='pull-left'>上一页</a></li>
+                                <li><a id='down' class='pull-right'>下一页</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-9 sbj">
+                    <div class="row" style='margin-top:0px;'>
+                        <div class='col-md-4'>
+                            <div class="thumbnail thumb">
+                                <div class='xpsize'>
+                                    <a href="album1.html" class='kong2'><img src="img/img1/x11.jpg" class='zpkong'></a>
+                                </div>
+                                <div class="caption">
+                                    <span class='kong1'>彩铅</span>
+                                    <span class='xclovenum pull-right xclove'>20</span><a class='xclove'><span class='glyphicon glyphicon-heart xclove pull-right'></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-4'>
+                            <div class="thumbnail thumb">
+                                <div class='xpsize'>
+                                    <a href="album2.html" class='kong2'><img src="img/img2/x21.jpg" class='zpkong'></a>
+                                </div>
+                                <div class="caption">
+                                    <span class='kong1'>手工艺品</span><span class='xclovenum pull-right xclove'>20</span><a class='xclove'><span class='glyphicon glyphicon-heart xclove pull-right'></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-4'>
+                            <div class="thumbnail thumb">
+                                <div class='xpsize'>
+                                    <a href="album3.html" class='kong2'><img src="img/img3/x31.jpg" class='zpkong'></a>
+                                </div>
+                                <div class="caption">
+                                    <span class='kong1'>校园歌手大赛</span><span class='xclovenum pull-right xclove'>20</span><a class='xclove'><span class='glyphicon glyphicon-heart xclove pull-right'></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-md-4'>
+                            <div class="thumbnail thumb">
+                                <div class='xpsize'>
+                                    <a href="album4.html" class='kong2'><img src="img/img4/x41.jpg" class='zpkong'></a>
+                                </div>
+                                <div class="caption">
+                                    <span class='kong1'>文艺生活</span><span class='xclovenum pull-right xclove'>20</span><a class='xclove'><span class='glyphicon glyphicon-heart xclove pull-right'></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-4'>
+                            <div class="thumbnail thumb">
+                                <div class='xpsize'>
+                                    <a href="album5.html" class='kong2'><img src="img/img5/x51.jpg" class='zpkong'></a>
+                                </div>
+                                <div class="caption">
+                                    <span class='kong1'>小雪的菜单</span><span class='xclovenum pull-right xclove'>20</span><a class='xclove'><span class='glyphicon glyphicon-heart xclove pull-right'></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-4'>
+                            <div class="thumbnail thumb">
+                                <div class='xpsize'>
+                                    <a href="album6.html" class='kong2'><img src="img/img6/x61.jpg" class='zpkong'></a>
+                                </div>
+                                <div class="caption">
+                                    <span class='kong1'>毕业纪念册</span><span class='xclovenum pull-right xclove'>20</span><a class='xclove'><span class='glyphicon glyphicon-heart xclove pull-right'></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    var oIcon = document.getElementsByClassName('glyphicon glyphicon-heart love pull-right');
+    var oIconx = document.getElementsByClassName('glyphicon glyphicon-heart xclove pull-right')
+    var oNum = document.getElementsByClassName('lovenum pull-right');
+    var oNumx = document.getElementsByClassName('xclovenum pull-right xclove');
+    var oDown = document.getElementById('down');
+    var oUp = document.getElementById('up');
+    var oUl = document.getElementsByClassName('pager')[0];
+    var oLi = oUl.getElementsByTagName('li');
+    var flag = 1;
+    love(1);
+    oDown.onclick = function() {
+        love(2);
+    }
+    oUp.onclick = function() {
+        love(1);
+    }
+
+    function love(flag) {
+        if (flag == 1) {
+            oLi[0].className = 'disabled';
+            oLi[1].className = 'active';
+            for (i = 0; i < oIcon.length; i++) {
+                oIcon[i].index = i;
+
+                oIcon[i].onclick = function() {
+                    oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
+                    oNumx[this.index].innerHTML = parseInt(oNumx[this.index].innerHTML) + 1;
+
+                    saveLocalStorage(this.index, oNum[this.index].innerHTML); //用多个键值对来存储每个list的获得点赞数
+                }
+            }
+            for (m = 0; m < oIcon.length; m++) {
+                oIconx[m].index = m;
+
+                oIconx[m].onclick = function() {
+                    oNumx[this.index].innerHTML = parseInt(oNumx[this.index].innerHTML) + 1;
+                    oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
+                    saveLocalStorage(this.index, oNumx[this.index].innerHTML); //用多个键值对来存储每个list的获得点赞数
+                }
+            }
+            for (j = 0; j < oIcon.length; j++) { //读取键值对中的数值
+                if (!localStorage.getItem(j)) {
+                    oNum[j].innerHTML = 20;
+                    oNumx[j].innerHTML = 20;
+                } else {
+                    oNum[j].innerHTML = localStorage.getItem(j);
+                    oNumx[j].innerHTML = localStorage.getItem(j);
+                }
+            }
+
+        }
+        if (flag == 2) {
+            oLi[1].className = 'disabled';
+            oLi[0].className = 'active';
+            for (i = 0; i < oIcon.length; i++) {
+                oIcon[i].index = i;
+
+                oIcon[i].onclick = function() {
+                    oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
+                    oNumx[this.index].innerHTML = parseInt(oNumx[this.index].innerHTML) + 1;
+                    saveLocalStorage(this.index + 6, oNum[this.index].innerHTML); //用多个键值对来存储每个list的获得点赞数
+                }
+            }
+            for (m = 0; m < oIcon.length; m++) {
+                oIconx[m].index = m;
+
+                oIconx[m].onclick = function() {
+
+                    oNumx[this.index].innerHTML = parseInt(oNumx[this.index].innerHTML) + 1;
+                    oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
+                    saveLocalStorage(this.index + 6, oNumx[this.index].innerHTML); //用多个键值对来存储每个list的获得点赞数
+                }
+            }
+            for (j = 0; j < oIcon.length; j++) { //读取键值对中的数值
+                if (!localStorage.getItem(j + 6)) {
+                    oNum[j].innerHTML = 20;
+                    oNumx[j].innerHTML = 20;
+                } else {
+                    oNum[j].innerHTML = localStorage.getItem(j + 6);
+                    oNumx[j].innerHTML = localStorage.getItem(j + 6);
+                }
+            }
+
+        }
+
+    }
+
+    function saveLocalStorage(key, value) { //存储键值对
+        // body...
+        localStorage.setItem(key, value);
+    }
+
+}
+$('#down').click(function(event) {
+    $.getJSON('data1.json', function(json, textStatus) {
+        console.log(textStatus);
+        console.log(json.item);
+        // for (var i = json.item.length - 1; i >= 0; i--) {
+        //    // $('.list-group').('list-group-item').eq(1).('h5').('a')=item[i].title;
+        //    console.log($(".list-group>list-group-item[1]"));
+        // };
+        $.each(json.item, function(index, val) {
+            /* iterate through array or object */
+
+            $(".kong").eq(index).html(val.title);
+            $('.kong1').eq(index).html(val.title);
+            $('.zpkong').eq(index).attr("src", val.img);
+            $('.kong').eq(index).attr('href',val.src);
+            $('.kong2').eq(index).attr('href',val.src);
+        });
+    });
+});
+$('#up').click(function(event) {
+    /* Act on the event */
+    $.getJSON('data2.json', function(json, textStatus) {
+        /*optional stuff to do after success */
+        $.each(json.xcitem, function(index, val) {
+            /* iterate through array or object */
+
+            $(".kong").eq(index).html(val.title);
+            $('.kong1').eq(index).html(val.title);
+            $('.zpkong').eq(index).attr("src", val.img);
+            $('.kong').eq(index).attr('href',val.src);
+            $('.kong2').eq(index).attr('href',val.src);
+        });
+    });
+});
+</script>
+
+</html>
