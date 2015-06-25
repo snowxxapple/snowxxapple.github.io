@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>xxblog</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/jPlayer/skin/css/jplayer.blue.monday.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    .box1 {
+        width: 100%;
+        height: 799px;
+        margin: 0px;
+        padding: 0px;
+        z-index: -1;
+        background: url(img/b4.jpg);
+    }
+    /*.box2 {
+        position: absolute;
+        z-index: 1;
+        width: 900px;
+        height: 600px;
+        margin-top: 60px;
+    }*/
+    
+    html {
+        overflow-x: hidden;
+    }
+    
+    #show div {
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        position: absolute;
+        padding: 0px;
+    }
+    
+    .active1 {
+        border: 1px dashed black;
+    }
+    
+    .love {
+        color: pink;
+        margin-right: 5px;
+    }
+    
+    .lovenum {
+        background: pink;
+        margin-right: 5px;
+    }
+    
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        /*下划线去不掉，bootstrap里面设定好了*/
+    }
+    
+    .listen {
+        padding: 20px;
+    }
+    
+    .intr {
+        margin: 15px;
+    }
+    
+    .music-feng {
+        height: 100px;
+        width: 100px;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin: 0px;
+    }
+    
+    .music-ul li {
+        display: inline-block;
+        margin: 2px;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class='navbar navbar-default navbar-fixed-top' role='navigation' style='margin-bottom:0px;'>
+        <div class="container">
+            <div class='navbar-header' style='width:150px;'>
+                <img src="img/1.jpg" class='img-circle navbar-brand' style='padding:0px;'>
+                <p style='margin-top:15px;'>小雪喜欢下雪天</p>
+            </div>
+            <ul class='nav navbar-nav pull-right'>
+                <li><a href="#photoshow">首页</a></li>
+                <li><a href="#person">个人简历</a></li>
+                <li class='dropdown' style='position:relative;left:-15px;'>
+                    <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="resume.html">详细简历</a></li>
+                    </ul>
+                </li>
+                <li><a href="#life1">爱生活</a></li>
+                <li class='dropdown' style='position:relative;left:-15px;'>
+                    <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span>
+                    <ul class='dropdown-menu'>
+                        <li><a href="#life1">照片日记</a></li>
+                <li><a href="#life2">心情日记</a></li>
+                <li class='divider'></li>
+                <li><a href="picture.html">我的相册</a></li>
+                <li><a href="">我的日志</a></li>
+            </ul>
+            </li>
+            <li><a href="#music">爱音乐</a></li>
+            <li class='dropdown' style='position:relative;left:-15px;'>
+                <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
+                <ul class='dropdown-menu'>
+                    <li><a href="music.html">我的音乐</a></li>
+                </ul>
+            </li>
+            <li><a href="#study" style='margin-right:10px;'>爱学习</a></li>
+            <li class='dropdown' style='position:relative;left:-25px;'>
+                <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
+                <ul class='dropdown-menu'>
+                    <li><a href="">Web前端笔记</a></li>
+                </ul>
+            </li>
+            <li>
+                <iframe width="200" scrolling="no" height="45" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=4&py=xian&num=5"></iframe>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class='box1' id='photoshow'>
+        <div class='row'>
+            <div class='col-md-12' style='padding-top:70px;padding-left:50px;'>
+                <h1>我的照片墙</h1>
+            </div>
+        </div>
+        <div class="row" id='show'>
+        <div style='top:250px;left:700px; background:url(img/show/show1.jpg);'></div>
+        <div style='top:200px;left:430px;background:url(img/show/show2.jpg);'></div>
+        <div style='top:180px;left:570px;background:url(img/show/show3.jpg);'></div>
+        <div style='top:180px;left:830px;background:url(img/show/show4.jpg);'></div>
+        <div style='top:200px;left:960px;background:url(img/show/show5.jpg);'></div>
+        <div style='top:330px;left:380px;background:url(img/show/show6.jpg);'></div>
+        <div style='top:330px;left:1010px;background:url(img/show/show7.jpg);'></div>
+        <div style='top:460px;left:430px;background:url(img/show/show8.jpg);'></div>
+        <div style='top:460px;left:960px;background:url(img/show/show9.jpg);'></div>
+        <div style='top:590px;left:560px;background:url(img/show/show10.jpg);'></div>
+        <div style='top:590px;left:860px;background:url(img/show/show11.jpg);'></div>
+        <div style='top:670px;left:700px;background:url(img/show/show12.jpg);'></div>
+        <div style='top:330px;left:540px;background:url(img/show/show13.jpg);'></div>
+        <div style='top:330px;left:860px;background:url(img/show/show14.jpg);'></div>
+        <div style='top:460px;left:580px;background:url(img/show/show15.jpg);'></div>
+        <div style='top:460px;left:810px;background:url(img/show/show16.jpg);'></div>
+        <div style='top:370px;left:700px;background:url(img/show/show17.jpg);'></div>
+        <div style='top:510px;left:700px;background:url(img/show/show18.jpg);'></div>
+    </div>
+        <!-- <div class='row'>//淡入淡出效果，最后没用
+            <div class="col-md-8 col-md-offset-2" style='position:absolute;top:35px;'>
+                <img src="img/bx1.jpg" class='box2 img img-responstive img-rounded'>
+                <img src="img/bx2.jpg" class='box2 img img-responstive img-rounded'>
+                <img src="img/bx3.jpg" class='box2 img img-responstive img-rounded'>
+                <img src="img/bx4.jpg" class='box2 img img-responstive img-rounded'>
+            </div>
+        </div> -->
+    </div>
+    <div class='box1' id='person'>
+        <div class='row'>
+            <div class='col-md-2' style='padding-top:70px;padding-left:50px;'>
+                <h1>个人简历</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-5 col-md-offset-1'>
+                <h4><a href="resume.html"><small>----详细简历</small></a></h4>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-8 col-md-offset-2' style='text-align:center;margin-top:200px;'>
+                <h1 style='color:#00bbff'>Who am I?</h1>
+                <p>爱学习 爱运动 爱生活</p>
+            </div>
+        </div>
+    </div>
+    <div class='box1' id='life1'>
+        <div class='row'>
+            <div class='col-md-5' style='padding-top:70px;padding-left:50px;'>
+                <h1>爱生活</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class='col-md-5'>
+                    <h4>----照片日记<span class='glyphicon glyphicon-camera'></span>
+                </div>
+                <div class='col-md-1 pull-right'><h4><a href="picture.html"><small>更多</small></a></h4>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-3 col-md-offset-1'>
+                <div class='thumbnail'>
+                    <div class='carousel slide' data-ride='carousel' id='carousel-container'>
+                        <div class='carousel-inner'>
+                            <div class="item active">
+                                <a href="album1.html"><img src="img/img1/x11.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x12.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x13.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x14.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x15.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x16.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x17.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x18.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x19.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album1.html"><img src="img/img1/x110.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='caption'>
+                        <h3>我爱彩铅</h3>
+                        <p>无意间在图书馆发现了一本彩铅的教程，从此便爱上了彩铅~</p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class='thumbnail'>
+                    <div class='carousel slide' data-ride='carousel'>
+                        <div class='carousel-inner'>
+                            <div class="item active">
+                                <a href="album2.html"><img src="img/img2/x21.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album2.html"><img src="img/img2/x22.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album2.html"><img src="img/img2/x23.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='caption'>
+                        <h3>我的手工艺品们</h3>
+                        <p>平时喜欢做一些小工艺品~</p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small>
+
+                        </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-4'>
+                <div class="thumbnail">
+                    <div class='carousel slide' data-ride='carousel'>
+                        <div class='carousel-inner'>
+                            <div class="item active" style='height:300px;overflow:hidden;'>
+                                <a href="album3.html"><img src="img/img6/x61.jpg"></a>
+                            </div>
+                            <div class="item" style='height:310px;overflow:hidden;'>
+                                <a href="album3.html"><img src="img/img6/x62.jpg"></a>
+                            </div>
+                            <div class="item" style='height:310px;overflow:hidden;'>
+                                <a href="album3.html"><img src="img/img6/x63.jpg"></a>
+                            </div>
+                            <div class="item" style='height:310px;overflow:hidden;'>
+                                <a href="album3.html"><img src="img/img6/x64.jpg"></a>
+                            </div>
+                            <div class="item" style='height:310px;overflow:hidden;'>
+                                <a href="album3.html"><img src="img/img6/x65.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='caption'>
+                        <h3>校园歌手大赛</h3>
+                        <p>2014年的夏天，和舍友一起组队参加了校园歌手大赛和毕业晚会，这也是我大学生活中最绚丽的色彩！</p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='box1'>
+        <div class="row">
+            <div class='clearfix'></div>
+            <div class='col-md-5 col-md-offset-1' style='padding-top:100px;'>
+                <div class='thumbnail'>
+                    <div class='carousel slide' data-ride='carousel'>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <a href="album4.html"><img src="img/img4/x41.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album4.html"><img src="img/img4/x42.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album4.html"><img src="img/img4/x43.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album4.html"><img src="img/img4/x44.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album4.html"><img src="img/img4/x45.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='caption'>
+                        <h3>我的文艺生活</h3>
+                        <p>Dance for you舞团,我是舞团财务总监~</p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum1 lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-4 col-md-offset-1' style='padding-top:50px;'>
+                <div class='thumbnail'>
+                    <div class='carousel slide' data-ride='carousel'>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <a href="album5.html"><img src="img/img3/x31.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album5.html"><img src="img/img3/x32.jpg"></a>
+                            </div>
+                            <div class="item">
+                                <a href="album5.html"><img src="img/img3/x33.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='caption'>
+                        <h3>小雪的菜单</h3>
+                        <p>喜欢做一些小点心、蜜饯</p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='box1' id='life2'>
+        <div class='row'>
+            <div class='col-md-5' style='padding-top:70px;padding-left:50px;'>
+                <h1>爱生活</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h4>----心情日记<span class='glyphicon glyphicon-book'></h4></div>
+                    <div class='col-md-1 pull-right'>
+                        <h4><a href="diary.html"><small>更多</small></a></h4></div>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class='panel panel-default'>
+                    <div class='panel-heading'>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <span>日志列表</span>
+                                <span class='glyphicon glyphicon-list'></span>
+                            </div>
+                            <div class="col-md-2 pull-right">
+                                <a href="" class='pull-right'>创建新日志 <span class='glyphicon glyphicon-edit'></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='panel-body'>
+                        <table class='table table-bordered'>
+                            <thead>
+                                <td>#</td>
+                                <td>名称</td>
+                                <td>时间</td>
+                                <!-- <td>操作</td> -->
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="diary.html">奋斗的青春</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="diary2.html">迷茫,才是青春应该有的样子</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="diary3.html">淡淡时光,美丽心情！</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="diary4.html">生活,温暖如花</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="diary5.html">第五篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="diary6.html">第六篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="diary7.html">第七篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="diary8.html">第八篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="diary9.html">第九篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="diary10.html">第十篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><a href="diary11.html">第十一篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- <ul class='pager' style='margin-top:0px;position:absolute;top:540px;left:510px;'>
+                        <li class='disabled'><a>上一页</a></li>
+                        <li class='disabled'><a>下一页</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='box1' id='music'>
+        <div class='row'>
+            <div class='col-md-5' style='padding-top:70px;padding-left:50px;'>
+                <h1>爱音乐</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h4>----我爱唱歌<span class='glyphicon glyphicon-music'></span></h4>
+                    </div>
+                    <div class='col-md-1 pull-right'>
+                        <h4><a href="music.html"><small>更多</small></a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div style='margin-top:50px;'>
+                        <h4 class='intr'>这里收录的有自己唱的歌</h4>
+                        <h4 class='intr'>也有和好朋友一起唱的歌</h4>
+                        <h4 class='intr' class='intr' class='intr'>有独唱,也有和声~</h4>
+                        <h4 class='intr' class='intr'>这里的歌都是用唱吧录的~</h4>
+                        <h4 class='intr'>欢迎大家关注我的<strong><i>唱吧号:</i></strong></h4>
+                        <h4 style='color:#EE82EE' class='intr'><strong><i>小雪喜欢下雪天</i></strong></h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-2">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                            <div id="jp_container_1" class="jp-audio pull-right" role="application" aria-label="media player">
+                                <div class="jp-type-single">
+                                    <div class="jp-gui jp-interface">
+                                        <div class="jp-controls">
+                                            <button class="jp-play" role="button" tabindex="0">play</button>
+                                            <button class="jp-stop" role="button" tabindex="0">stop</button>
+                                        </div>
+                                        <div class="jp-progress">
+                                            <div class="jp-seek-bar">
+                                                <div class="jp-play-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-volume-controls">
+                                            <button class="jp-mute" role="button" tabindex="0">mute</button>
+                                            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+                                            <div class="jp-volume-bar">
+                                                <div class="jp-volume-bar-value"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-time-holder">
+                                            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                                            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                                            <div class="jp-toggles">
+                                                <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-details">
+                                        <div class="jp-title" aria-label="title">&nbsp;</div>
+                                    </div>
+                                    <div class="jp-no-solution">
+                                        <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <span><img src="img/musicimg1/3.jpg" style='height:111px;width:111px;' class='pull-right listen-feng'></span>
+                        </div>
+                    </div>
+                    <div class="row" style='padding-top:30px;padding-left:30px;'>
+                        <div class="col-md-12">
+                            <div class='class="jp-playlist"'>
+                                <ul class='music-ul' style='list-style:none;'>
+                                    <li>
+                                        <a><img src="img/musicimg1/3.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/4.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/5.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/6.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/7.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/8.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/9.jpg" class='music-feng'></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="img/musicimg1/10.jpg" class='music-feng'></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='box1' id='study'>
+        <div class='row'>
+            <div class='col-md-5' style='padding-top:70px;padding-left:50px;'>
+                <h1>爱学习</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class='row'>
+                    <div class="col-md-5">
+                        <h4>----Web前端笔记<span class='glyphicon glyphicon-pencil'></span></h4>
+                    </div>
+                    <div class='col-md-1 pull-right'>
+                        <h4><a href=""><small>更多</small></a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class='panel panel-default'>
+                    <div class='panel-heading'>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <span>笔记列表</span>
+                                <span class='glyphicon glyphicon-list'></span>
+                            </div>
+                            <div class="col-md-2 pull-right">
+                                <a href="" class='pull-right'>创建新笔记<span class='glyphicon glyphicon-edit'></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='panel-body'>
+                        <table class='table table-bordered'>
+                            <thead>
+                                <td>#</td>
+                                <td>名称</td>
+                                <td>时间</td>
+                                <!-- <td>操作</td> -->
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="">第一篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="">第二篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="">第三篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="">第四篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="">第五篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="">第六篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="">第七篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="">第八篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="">第九篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="">第十篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><a href="">第十一篇</a></td>
+                                    <td>2015-6-1</td>
+                                    <!-- <td><a href="">编辑</a></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- <ul class='pager' style='margin-top:0px;position:absolute;top:540px;left:510px;'>
+                        <li><a href="">上一页</a></li>
+                        <li><a href="">下一页</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src='js/jquery.jplayer.js'></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+// $(function() {                                                           //淡入淡出效果。jquery实现
+//     $(".box2").fadeOut(0).eq(0).fadeIn(0); //先隐藏所有图片，再将对象移到第一张图片，使之淡入
+//     var i = 0; //初始化图片的索引值
+//     setInterval(function() { //setInterval是每隔一段时间循环一个动作
+//         if ($(".box2").length > (i + 1)) { //判断是否执行到最后一张图片
+//             $(".box2").eq(i).fadeOut(5000).next("img").fadeIn(5000);
+
+//             //索引值为i的图片淡出，它的下一张图片淡入
+//             i++; //使索引值增加1，下一次执行动作的图片索引值为i+1，
+//         } else { //如果为最后一张图片，将执行下面的代码
+//             $(".box2").eq(i).fadeOut(5000);
+//             $('.box2').eq(0).fadeIn(5000); //索引值为i的图片淡出，这里不同于上面，是第一张图片淡入
+//             i = 0; //将索引值变为0，回到初始状态
+//         }
+//     }, 5000); //5000ms执行一次淡入淡出的动作
+// })
+
+
+window.onload = function() {
+    //照片墙代码部分
+    var oDiv1 = document.getElementById('show');
+    var oDiv = oDiv1.getElementsByTagName('div');
+    var oNear;
+
+    var aLeft = new Array();
+    var aTop = new Array();
+    var iMinzindex = 2;
+
+    for (i = 0; i < oDiv.length; i++) //把div当前的位置存到数组中 布局转换，把文档流定位转化为绝对定位
+    {
+        aLeft[i] = oDiv[i].offsetLeft;
+        aTop[i] = oDiv[i].offsetTop;
+
+    }
+
+    for (var i = oDiv.length - 1; i >= 0; i--) {
+        oDiv[i].style.left = aLeft[i] + 'px';
+        oDiv[i].style.top = aTop[i] + 'px';
+        oDiv[i].style.position = 'absolute'; //绝对定位一定要写
+        oDiv[i].index = i;
+    };
+
+    for (var i = oDiv.length - 1; i >= 0; i--) {
+        setDrag(oDiv[i]);
+    }
+
+    function setDrag(obj) {
+
+        obj.onmousedown = function(ev) {
+            obj.style.zIndex = iMinzindex++; //使得当前点击的div永远显示在最上层
+
+            var oEvent = ev || event;
+            var disX = oEvent.clientX - obj.offsetLeft;
+            var disY = oEvent.clientY - obj.offsetTop;
+            document.onmousemove = function(ev) {
+                var oEvent = ev || event;
+                obj.style.left = oEvent.clientX - disX + 'px';
+                obj.style.top = oEvent.clientY - disY + "px";
+                for (i = 0; i < oDiv.length; i++) {
+                    oDiv[i].className = '';
+                }
+                oNear = findNearest(obj); //检测碰撞，并且找到最近的碰撞
+                if (oNear) {
+                    oNear.className = 'active1'; //最近的被碰的加边框，不要用active命名，因为bootstrap里面有active类，会覆盖                   
+                }
+            }
+            document.onmouseup = function() { //给document加事件是防止鼠标移出div
+                document.onmousemove = null;
+                document.onmouseup = null;
+
+                var oNear = findNearest(obj);
+                if (oNear) //如果碰撞 交换位置
+                {
+                    oNear.style.zIndex = iMinzindex++;
+                    obj.style.zIndex = iMinzindex++;
+                    //不用运动框架来做div运动效果，因为开定时器，不会清，会出现抖动现象（在定时器没清时又点击，会再次开启一个定时器，所以抖动，但是没解决了，运动框架见xxphotowall。html）                   
+                    $(obj).animate({
+
+                            left: aLeft[oNear.index],
+                            top: aTop[oNear.index]
+                        },
+                        500);
+                    $(oNear).animate({
+                            left: aLeft[obj.index],
+                            top: aTop[obj.index]
+                        },
+                        500);
+                    oNear.className = '';
+                    //以上为jquery的animate（）方法，但是jquery的对象才能调用jquery的方法，所以用$()来包起DOM元素，使之成为jquery的对象
+
+                    //交换索引值， 位置交换，索引值也要交换，否则div1移动到div2时仍认为自己是div1
+                    var tmp = 0;
+                    tmp = obj.index;
+                    obj.index = oNear.index;
+                    oNear.index = tmp;
+                } else { //没碰撞
+                    $(obj).animate({
+                            left: aLeft[obj.index],
+                            top: aTop[obj.index]
+                        },
+                        500);
+                }
+            }
+            return false; //禁止浏览器默认行为，在mousedown里面
+        }
+    }
+
+    function colTest(obj1, obj2) { //碰撞检测函数
+        var l1 = obj1.offsetLeft;
+        var r1 = obj1.offsetLeft + obj1.offsetWidth;
+        var t1 = obj1.offsetTop;
+        var b1 = obj1.offsetTop + obj1.offsetHeight;
+
+        var l2 = obj2.offsetLeft;
+        var r2 = obj2.offsetLeft + obj2.offsetWidth;
+        var t2 = obj2.offsetTop;
+        var b2 = obj2.offsetTop + obj2.offsetWidth;
+
+        if (r1 < l2 || l1 > r2 || b1 < t2 || t1 > b2) //碰不上
+        {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //以下为找到所有碰撞中最近的那个div，其实当时没写找最近时也不会给碰到的都加框，只会给第一个碰到的加框，直到碰不到状态
+    function findNearest(obj) {
+        var iMin = 999999;
+        var iMinindex = -1;
+        for (var i = oDiv.length - 1; i >= 0; i--) {
+            if (obj == oDiv[i]) {
+                continue;
+            } //这句话很重要！一定要判断是否跟自己碰撞，否则会出问题
+            if (colTest(obj, oDiv[i])) {
+                var dis = getDis(obj, oDiv[i]);
+                if (dis < iMin) {
+                    iMin = dis;
+                    iMinindex = i;
+                }
+
+            }
+        };
+        if (iMinindex == -1) {
+            return null;
+        } else {
+            return oDiv[iMinindex];
+        }
+
+    }
+
+    function getDis(obj1, obj2) {
+        var disX = obj1.offsetLeft - obj2.offsetLeft;
+        var disY = obj1.offsetTop - obj2.offsetTop;
+        var distance = Math.sqrt(disX * disX + disY * disY);
+        return distance;
+    }
+
+
+    // //试听部分代码
+    // var oListen = document.getElementsByClassName('listen');
+    // var oAudio = document.getElementsByTagName('audio');
+    // var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3'];
+    // for (var m = 0; m < oListen.length; m++) {
+    //     oListen[m].index = m;
+    //     oListen[m].onclick = function() {
+
+    //         for (var n = 0; n < oListen.length; n++) {
+    //             if (n == this.index) {
+
+    //                 oAudio[this.index].src = arr[this.index]; //必须要加上src，否则是播放不了的，尽管在布局中已经给src值了
+    //                 oAudio[this.index].autoplay = 'autoplay';
+    //             } else {
+    //                 oAudio[n].src = '';
+    //                 //想做到同一时间只能播放一首歌，没点暂停时不会给播放其他歌造成干扰，但是这样只有点试听才加载
+    //             }
+    //         }
+    //     }
+    // }
+
+    //音乐播放插件代码
+    var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3', 'music/river.mp3', 'music/flower.mp3'];
+    var musicname = ['明天你好 &nbsp演唱:小雪 小杜', '半个月亮爬上来 &nbsp演唱:小雪 小杜', '送别 &nbsp演唱:小雪 小杜', '我要的飞翔 &nbsp演唱:小雪', '风中有朵雨做的云 &nbsp演唱:小雪', '大手拉小手 &nbsp演唱:小雪 小杜', '外婆的澎湖湾 &nbsp演唱:小雪 小杜', '夜来香 &nbsp演唱:小雪 小杜'];
+    var oListen = document.getElementsByClassName('music-feng');
+    var oListenImg = document.getElementsByClassName('pull-right listen-feng')[0];
+    var arrImg = ['img/musicimg1/3.jpg', 'img/musicimg1/4.jpg', 'img/musicimg1/5.jpg', 'img/musicimg1/6.jpg', 'img/musicimg1/7.jpg', 'img/musicimg1/8.jpg', 'img/musicimg1/9.jpg', 'img/musicimg1/10.jpg'];
+    var oPrevious = document.getElementsByClassName('jp-previousxt');
+    var oNext = document.getElementsByClassName('jp-next');
+    console.log(oNext);
+    $("#jquery_jplayer_1").jPlayer({
+        // var that = this;
+        ready: function(event) {
+            $("#jquery_jplayer_1").jPlayer("setMedia", {
+                title: musicname[0],
+                // m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+                // oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+                mp3: arr[0]
+
+            });
+
+            for (x = 0; x < oListen.length; x++) {
+                oListen[x].index = x;
+                oListen[x].onclick = function() {
+                    var that = this;
+                    oListenImg.src = arrImg[this.index];
+
+                    $("#jquery_jplayer_1").jPlayer("setMedia", {
+                        title: musicname[this.index],
+                        // m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+                        // oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+                        mp3: arr[this.index]
+
+                    }).jPlayer('play');
+
+                    // oNext.onclick=function(){//不能加事件
+                    //    console.log(oNext);
+                    //     var order=that.index++;
+                    //     $("#jquery_jplayer_1").jPlayer("setMedia", {
+                    //     title: musicname[order],
+                    //     // m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+                    //     // oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+                    //     mp3: arr[order]
+
+                    // }).jPlayer('play');
+                    // }
+
+                }
+            }
+
+
+
+        },
+        swfPath: "js",
+        supplied: "m4a, oga,mp3",
+        wmode: "window",
+        useStateClassSkin: true,
+        autoBlur: false,
+        smoothPlayBar: true,
+        keyEnabled: true,
+        remainingDuration: true,
+        toggleDuration: true
+    });
+
+
+
+
+
+
+
+    //照片以及歌曲点赞部分代码,没办法吧xxblog和music以及picture的
+
+    var oLove = document.getElementsByClassName('glyphicon glyphicon-heart love');
+    var oLoveNum = document.getElementsByClassName('badge lovenum');
+    for (var p = 0; p < 5; p++) {
+        oLove[p].index = p;
+        oLove[p].onclick = function() {
+            oLoveNum[this.index].innerHTML = parseInt(oLoveNum[this.index].innerHTML) + 1;
+            localStorage.setItem(this.index, oLoveNum[this.index].innerHTML);
+        }
+        if (!localStorage.getItem(p)) {
+            oLoveNum[p].innerHTML = 20;
+        } else {
+            oLoveNum[p].innerHTML = localStorage.getItem(p);
+        }
+
+    }
+    // for (var q = 0; q < 6; q++) {
+    //     if (!localStorage.getItem(q + 12)) {
+    //         oLoveNum[q + 5].innerHTML = 20;
+    //     } else {
+    //         oLoveNum[q + 5].innerHTML = localStorage.getItem((q + 12));
+    //     }
+    //     oLove[q + 5].index = q;
+    //     oLove[q + 5].onclick = function() {
+    //         oLoveNum[this.index + 5].innerHTML = parseInt(oLoveNum[this.index + 5].innerHTML) + 1;
+    //         localStorage.setItem((this.index + 12), oLoveNum[this.index + 5].innerHTML);
+    //     }
+
+    // }
+
+}
+</script>
+
+</html>
