@@ -238,19 +238,12 @@ window.onload = function() {
     var oImg = document.getElementsByClassName('img box2 img-rounded');
     var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3', 'music/river.mp3', 'music/flower.mp3', 'music/time.mp3'];
     var oAudio = document.getElementsByTagName('audio')[0];
-
     var oIcon = document.getElementsByClassName('glyphicon glyphicon-heart love pull-right');
-    // var oIconmusic = document.getElementsByClassName('glyphicon glyphicon-heart love kong')[0];
-
     var oNum = document.getElementsByClassName('lovenum pull-right');
-    // var oNummusic = document.getElementsByClassName('lovenum kong')[0];
-
     var oWarn = document.getElementsByClassName('alert alert-info alert-dismissable')[0];
-
     var oName = document.getElementsByClassName('name')[0];
     var oActor = document.getElementsByClassName('actor')[0];
     var oGeci = document.getElementsByClassName('geci')[0];
-
     var aName = ['歌曲名: 明天你好', '歌曲名: 半个月亮爬上来', '歌曲名: 送别', '歌曲名: 我要的飞翔', '歌曲名: 风中有朵雨做的云', '歌曲名: 大手拉小手', '歌曲名: 外婆的澎湖湾', '歌曲名: 夜来香', '歌曲名: 没时间'];
     var aActor = ['演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪', '演唱者: 小雪', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜'];
     var aGeci = ['看昨天的我们 走远了 在命运广场中央 等待 那模糊的 肩膀 越奔跑 越渺小 曾经 并肩往前的 伙伴 在举杯 祝福后都 走散 只是那个 夜晚 我深深 的都留藏在心坎 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着 奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 勇敢是什么 当我朝着反方向走去 在楼梯的角落 找勇气 抖着肩膀 哭泣 问自己 在哪里 曾经 并肩往前 的伙伴 沉默着 懂得我的委屈 时间它总说谎 我从 不曾失去 那些肩膀 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 勇敢是什么', '半个月亮爬上来 咿啦啦 爬上来 照着我的姑娘梳妆台 咿啦啦 梳妆台 请你把那纱窗快打开 咿啦啦 快打开 咿啦啦 快打开 再把你那玫瑰摘一朵 轻轻的 扔下来 再把你那玫瑰摘一朵 轻轻的 扔下来 半个月亮爬上来 咿啦啦 爬上来 为什么我的姑娘不出来 咿啦啦 不出来 请你把那纱窗快打开 咿啦啦 快打开 咿啦啦 快打开 再把你那玫瑰摘一朵   轻轻的 扔下来 再把你那玫瑰摘一朵 轻轻的 扔下来 ', '长亭外,古道边,芳草碧连天 晚风拂柳笛声残,夕阳山外山 天之涯,地之角,知交半零落 人生难得是欢聚,唯有别离多 长亭外,古道边,芳草碧连天 问君此去几时还,来时莫徘徊 天之涯,地之角,知交半零落 一壶浊洒尽余欢,今宵别梦寒', '天气冷暖不确定 每个人躲在人海里 相遇总是没道理 弄错后轻轻说对不起 没关系不论失去了什么 都没痕迹 每一次让泪水流回心里 去灌溉梦想开出奇迹 我要的坚强不是谁的肩膀 怀抱是个不能停留的地方 这世界多拥挤就有多匆忙 用所有的寂寞时光给自己鼓掌 我要的飞翔不是借双翅膀 自由是个不能代替的远方 用旅途的孤单来收获成长 直到遇见了你一起分享 没关系不论失去了什么 都没痕迹 每一次让泪水流回心里 去灌溉梦想开出奇迹 我要的坚强不是谁的肩膀 怀抱是个不能停留的地方 这世界多拥挤就有多匆忙 用所有的寂寞时光给自己鼓掌 我要的飞翔不是借双翅膀 自由是个不能代替的远方 用旅途的孤单来收获成长 直到遇见了你一起分享 我要的飞翔不是借双翅膀 自由是个不能代替的远方 用旅途的孤单来收获成长 直到遇见了你一起分享 ', '风中有朵雨做的云 一朵雨做的云 云的心里全都是雨 滴滴全都是你 风中有朵雨做的云 一朵雨做的云 云在风里伤透了心 不知又将吹向哪儿去 吹啊吹吹落花满地 找不到一丝丝怜惜 飘啊飘飘过千万里 苦苦守候你的归期 每当天空又下起了雨 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 风中有朵雨做的云 一朵雨做的云 云在风里伤透了心 不知又将吹向哪儿去 吹啊吹吹落花满地 找不到一丝丝怜惜 飘啊飘飘过千万里 苦苦守候你的归期 每当天空又下起了雨 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 吹啊吹吹落花满地 找不到一丝丝怜惜 飘啊飘飘过千万里 苦苦守候你的归期 每当天空又下起了雨 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 ', '还记得那场音乐会的烟火 还记得那个凉凉的深秋 还记得人潮把你推向了我 游乐园拥挤的正是时候 一个夜晚坚持不睡的等候 一起泡温泉奢侈的享受 有一次日记里愚蠢的困惑 因为你的微笑幻化成风 你大大的勇敢保护着我 我小小的关怀喋喋不休 感谢我们一起走了那么久 又一起回到凉凉深秋 给你我的手 像温柔野兽 把自由交给草原的辽阔 我们小手拉大手 一起交游 今天别想太多 你是我的梦 像北方的风 却正能帮我悠扬的哀愁 我们小手拉大手 今天加油向昨天挥挥手 LALALA 给你我的手 像温柔野兽 我们一直就这样向前走 我们小手拉大手 一起交游 今天别想太多 LALALALALA 像北方的风 却正南方暖洋洋的哀愁 我们小手拉大手 今天加油向昨天挥挥手 我们小手拉大手 今天为我加油 舍不得挥挥手 ', '晚风轻拂着澎湖湾 白浪逐沙滩 没有椰林醉斜阳 只是一片海蓝蓝 坐在门前的矮墙上 一遍遍幻想 也是黄昏的沙滩上 有着脚印两对半 那是外婆拄着杖 将我手轻轻挽 踩着薄暮走向余晖 暖暖的澎湖湾 一个脚印是笑语一串 消磨许多时光 直到夜色吞没我俩 在回家的路上 澎湖湾澎湖湾 外婆的澎湖湾 有我许多的童年幻想 阳光沙滩海浪仙人掌 还有一位老船长 晚风轻拂着澎湖湾 白浪逐沙滩 没有椰林醉斜阳 只是一片海蓝蓝 坐在门前的矮墙上 一遍遍幻想 也是黄昏的沙滩上 有着脚印两对半 那是外婆拄着杖 将我手轻轻挽 踩着薄暮走向余晖 暖暖的澎湖湾 一个脚印是笑语一串 消磨许多时光 直到夜色吞没我俩 在回家的路上 澎湖湾澎湖湾 外婆的澎湖湾 有我许多的童年幻想 阳光沙滩海浪仙人掌 还有一位老船长', '那南风吹来清凉 那夜莺啼声细唱 月下的花儿都入梦 只有那夜来香 吐露着芬芳 我爱这夜色茫茫 也爱这夜莺歌唱 更爱那花一般的梦 拥抱着夜来香 闻这夜来香 夜来香我为你歌唱 夜来香我为你思量 啊~啊我为你歌唱 我为你思量 la~la~la 夜来香 夜来香 夜来香',
@@ -259,19 +252,14 @@ window.onload = function() {
     for (var i = 0; i < oListen.length; i++) {
         oListen[i].index = i; //给试听按钮加索引值 
         oListen[i].onclick = function() {
-
-            oAudio.src = arr[this.index];
-            
+            oAudio.src = arr[this.index];            
             oAudio.autoplay = 'autoplay';
-
             oName.innerHTML = aName[this.index];
             oActor.innerHTML = aActor[this.index];
-            oGeci.innerHTML = aGeci[this.index];
-            
+            oGeci.innerHTML = aGeci[this.index];            
             for (var m = 0; m < oImg.length; m++) {
                 oImg[m].src = 'img/musicimg1/' + (4 * this.index + m + 1) + '.jpg'; //更换图片
             };
-
         }
     };
     for (var j = 0; j < oIcon.length; j++) {
@@ -284,90 +272,11 @@ window.onload = function() {
     for (k = 0; k < oIcon.length; k++) { //读取键值对中的数值
         if (!localStorage.getItem(k+12)) {//由于我的相册有12个所以从12号起开始存储我的音乐的点赞数
             oNum[k].innerHTML = 20;
-            // oNummusic.innerHTML = 20;
-
-
         } else {
             oNum[k].innerHTML = localStorage.getItem(k+12);
-            // oNummusic.innerHTML = oNum[0].innerHTML;
         }
     }
 }
-
-// for (var i = 0; i < oListen.length; i++) {
-//     oListen[i].index = i; //给试听按钮加索引值
-//     // oicon[i].index = i;
-
-//     oListen[i].onclick = function() { //希望只能给当前播放的歌点赞，试听过的和没试听的不能点赞，而现在是试听过的也能点赞
-//         oAudio.src = arr[this.index];
-//         oAudio.autoplay = 'autoplay';
-//         // $(this).parent('li').find('.glyphicon glyphicon-heart love pull-right').attr('disabled', '');
-//         // $(this).prevAll('.glyphicon glyphicon-heart love pull-right').attr('disabled', 'disabled');
-//         // $(this).nextAll('.glyphicon .glyphicon-heart love pull-right').attr('disabled', 'disabled');
-
-//         oName.innerHTML = aName[this.index];
-//         oActor.innerHTML = aActor[this.index];
-//         oGeci.innerHTML = aGeci[this.index];
-
-//         oIcon[this.index].index = this.index; //此时this只的是olisten[i],给与试听相对应的桃心加索引值
-
-//         oIcon[this.index].onclick = function() {
-//         //     console.log($(this).find('li'))
-//         // $(this).prevAll('.glyphicon glyphicon-heart love pull-right').unbind('click');
-//         // $(this).nextAll('.glyphicon .glyphicon-heart love pull-right').unbind('click');
-//             oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
-//             // oNummusic.innerHTML = parseInt(oNum[this.index].innerHTML); //此处的this是被点的桃心
-//             saveLocalStorage(this.index, oNum[this.index].innerHTML); //用多个键值对来存储每个list的获得点赞数
-//         }
-
-//         for (var j = 0; j < oImg.length; j++) {
-//             oImg[j].src = 'img/musicimg1/' + (4 * this.index + j + 1) + '.jpg'; //更换图片
-//             oImg[j].index = 4 * this.index + j + 1; //给图片加索引值，以便确定当前是第几首歌
-//             oNum[this.index].innerHTML = localStorage.getItem(this.index); //存下当前的点赞数
-//             // oNummusic.innerHTML = oNum[this.index].innerHTML;
-
-//             // oIconmusic.onclick = function() {
-//             //     oNummusic.innerHTML = parseInt(oNummusic.innerHTML) + 1;
-//             //     var x = parseInt(((oImg[3].index) / 4) - 1);
-//             //     switch ((oImg[3].index) / 4) {
-//             //         case 1:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 2:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 3:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 4:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 5:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 6:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 7:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 8:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //         case 9:
-//             //             oNum[x].innerHTML = oNummusic.innerHTML;
-//             //             saveLocalStorage(x, oNummusic.innerHTML);
-//             //     }
-//             // }
-//         };
-
-//         function saveLocalStorage(key, value) { //存储键值对,实际上不用这么写，直接传参数就可以，只是为了表明两个参数的意义是什么
-//             // body...
-//             localStorage.setItem(key, value);
-//         }
-
-
-//     }
 </script>
 
 </html>

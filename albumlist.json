@@ -1,0 +1,15 @@
+{
+    "albumlist": [{
+        "img": "img/img1/x11.jpg"
+    }, {
+        "img": "img/img2/x21.jpg"
+    }, {
+        "img": "img/img4/x41.jpg"
+    }, {
+        "img": "img/img5/x51.jpg"
+    }, {
+        "img": "img/img6/x61.jpg"
+    }, {
+        "img": "img/img3/x31.jpg"
+    }]
+}

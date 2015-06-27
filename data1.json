@@ -1,34 +1,21 @@
 {
     "item": [{
         "title": "周末",
-        "love": 30,
-        "img": "img/img7/x72.jpg",
-        "src":"album7.html"
+        "img": "img/img9/x92.jpg"
     }, {
         "title": "我和星星",
-        "love": 30,
-        "img": "img/img8/x84.jpg",
-        "src":"album8.html"
+        "img": "img/img9/x91.jpg"
     }, {
-        "title": "It's me",
-        "love": 30,
-        "img": "img/img9/x92.jpg",
-        "src":"album9.html"
+        "title": "我",
+        "img": "img/img9/x93.jpg"
     }, {
-        "title": "me",
-        "love": 30,
-        "img": "img/img9/x91.jpg",
-        "src":"album10.html"
+        "title": "彩铅3",
+        "img": "img/img9/x94.jpg"
     }, {
-        "title": "me",
-        "love": 30,
-        "img": "img/img9/x95.jpg",
-        "src":"album11.html"
+        "title": "彩铅4",
+        "img": "img/img9/x95.jpg"
     }, {
-        "title": "me",
-        "love": 30,
-        "img": "img/img9/x912.jpg",
-        "src":"album12.html"
+        "title": "彩铅5",
+        "img": "img/img9/x96.jpg"
     }]
-
-} 
+}
