@@ -88,6 +88,7 @@
         border: 1px solid white;
         border-radius: 5px;
     }
+
     </style>
 </head>
 
@@ -100,13 +101,6 @@
             </div>
             <ul class='nav navbar-nav pull-right'>
                 <li><a href="#photoshow">首页</a></li>
-                <li><a href="#person">个人简历</a></li>
-                <li class='dropdown' style='position:relative;left:-15px;'>
-                    <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="resume.html">详细简历</a></li>
-                    </ul>
-                </li>
                 <li><a href="#life1">爱生活</a></li>
                 <li class='dropdown' style='position:relative;left:-15px;'>
                     <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span>
@@ -115,21 +109,28 @@
                 <li><a href="#life2">心情日记</a></li>
                 <li class='divider'></li>
                 <li><a href="picture.html">我的相册</a></li>
-                <li><a href="">我的日志</a></li>
+                <li><a href="diary.html">我的日志</a></li>
             </ul>
             </li>
-            <li><a href="#music">爱音乐</a></li>
+            <li><a href="#music" style='padding-left:0px;'>爱音乐</a></li>
             <li class='dropdown' style='position:relative;left:-15px;'>
                 <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
                 <ul class='dropdown-menu'>
                     <li><a href="music.html">我的音乐</a></li>
                 </ul>
             </li>
-            <li><a href="#study" style='margin-right:10px;'>爱学习</a></li>
-            <li class='dropdown' style='position:relative;left:-25px;'>
+            <li><a href="#study" style='padding-left:0px;'>爱学习</a></li>
+            <li class='dropdown' style='position:relative;left:-15px;'>
                 <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
                 <ul class='dropdown-menu'>
-                    <li><a href="">Web前端笔记</a></li>
+                    <li><a href="">网页游戏</a></li>
+                </ul>
+            </li>
+            <li><a href="#person" style='padding-left:0px;'>个人简历</a></li>
+            <li class='dropdown' style='position:relative;left:-15px;'>
+                <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
+                <ul class='dropdown-menu'>
+                    <li><a href="resume.html">详细简历</a></li>
                 </ul>
             </li>
             <li>
@@ -145,50 +146,24 @@
             </div>
         </div>
         <div class="row" id='show'>
-        <div style='top:250px;left:700px; background:url(img/show/show1.jpg);'></div>
-        <div style='top:200px;left:430px;background:url(img/show/show2.jpg);'></div>
-        <div style='top:180px;left:570px;background:url(img/show/show3.jpg);'></div>
-        <div style='top:180px;left:830px;background:url(img/show/show4.jpg);'></div>
-        <div style='top:200px;left:960px;background:url(img/show/show5.jpg);'></div>
-        <div style='top:330px;left:380px;background:url(img/show/show6.jpg);'></div>
-        <div style='top:330px;left:1010px;background:url(img/show/show7.jpg);'></div>
-        <div style='top:460px;left:430px;background:url(img/show/show8.jpg);'></div>
-        <div style='top:460px;left:960px;background:url(img/show/show9.jpg);'></div>
-        <div style='top:590px;left:560px;background:url(img/show/show10.jpg);'></div>
-        <div style='top:590px;left:860px;background:url(img/show/show11.jpg);'></div>
-        <div style='top:670px;left:700px;background:url(img/show/show12.jpg);'></div>
-        <div style='top:330px;left:540px;background:url(img/show/show13.jpg);'></div>
-        <div style='top:330px;left:860px;background:url(img/show/show14.jpg);'></div>
-        <div style='top:460px;left:580px;background:url(img/show/show15.jpg);'></div>
-        <div style='top:460px;left:810px;background:url(img/show/show16.jpg);'></div>
-        <div style='top:370px;left:700px;background:url(img/show/show17.jpg);'></div>
-        <div style='top:510px;left:700px;background:url(img/show/show18.jpg);'></div>
-    </div>
-        <!-- <div class='row'>//淡入淡出效果，最后没用
-            <div class="col-md-8 col-md-offset-2" style='position:absolute;top:35px;'>
-                <img src="img/bx1.jpg" class='box2 img img-responstive img-rounded'>
-                <img src="img/bx2.jpg" class='box2 img img-responstive img-rounded'>
-                <img src="img/bx3.jpg" class='box2 img img-responstive img-rounded'>
-                <img src="img/bx4.jpg" class='box2 img img-responstive img-rounded'>
-            </div>
-        </div> -->
-    </div>
-    <div class='box1' id='person'>
-        <div class='row'>
-            <div class='col-md-2' style='padding-top:70px;padding-left:50px;'>
-                <h1>个人简历</h1>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-md-5 col-md-offset-1'>
-                <h4><a href="resume.html"><small>----详细简历</small></a></h4>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-md-8 col-md-offset-2' style='text-align:center;margin-top:200px;'>
-                <h1 style='color:#00bbff'>Who am I?</h1>
-                <p>爱学习 爱运动 爱生活</p>
-            </div>
+            <div style='top:250px;left:700px; background:url(img/show/show1.jpg);'></div>
+            <div style='top:200px;left:430px;background:url(img/show/show2.jpg);'></div>
+            <div style='top:180px;left:570px;background:url(img/show/show3.jpg);'></div>
+            <div style='top:180px;left:830px;background:url(img/show/show4.jpg);'></div>
+            <div style='top:200px;left:960px;background:url(img/show/show5.jpg);'></div>
+            <div style='top:330px;left:380px;background:url(img/show/show6.jpg);'></div>
+            <div style='top:330px;left:1010px;background:url(img/show/show7.jpg);'></div>
+            <div style='top:460px;left:430px;background:url(img/show/show8.jpg);'></div>
+            <div style='top:460px;left:960px;background:url(img/show/show9.jpg);'></div>
+            <div style='top:590px;left:560px;background:url(img/show/show10.jpg);'></div>
+            <div style='top:590px;left:860px;background:url(img/show/show11.jpg);'></div>
+            <div style='top:670px;left:700px;background:url(img/show/show12.jpg);'></div>
+            <div style='top:330px;left:540px;background:url(img/show/show13.jpg);'></div>
+            <div style='top:330px;left:860px;background:url(img/show/show14.jpg);'></div>
+            <div style='top:460px;left:580px;background:url(img/show/show15.jpg);'></div>
+            <div style='top:460px;left:810px;background:url(img/show/show16.jpg);'></div>
+            <div style='top:370px;left:700px;background:url(img/show/show17.jpg);'></div>
+            <div style='top:510px;left:700px;background:url(img/show/show18.jpg);'></div>
         </div>
     </div>
     <div class='box1' id='life1'>
@@ -199,10 +174,13 @@
         </div>
         <div class='row'>
             <div class='col-md-10 col-md-offset-1'>
-                <div class='col-md-5'>
-                    <h4>----照片日记<span class='glyphicon glyphicon-camera'></span>
-                </div>
-                <div class='col-md-1 pull-right'><h4><a href="picture.html"><small>更多</small></a></h4>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h4>----照片日记<span class='glyphicon glyphicon-camera'></span></h4>
+                    </div>
+                    <div class='col-md-1 pull-right'>
+                        <h5><a href="picture.html">更多</a></h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,34 +190,34 @@
                     <div class='carousel slide' data-ride='carousel' id='carousel-container'>
                         <div class='carousel-inner'>
                             <div class="item active">
-                                <a href="album1.html"><img src="img/img1/x11.jpg"></a>
+                                <img src="img/img1c/x11.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x12.jpg"></a>
+                                <img src="img/img1c/x12.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x13.jpg"></a>
+                                <img src="img/img1c/x13.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x14.jpg"></a>
+                                <img src="img/img1c/x14.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x15.jpg"></a>
+                                <img src="img/img1c/x15.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x16.jpg"></a>
+                                <img src="img/img1c/x16.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x17.jpg"></a>
+                                <img src="img/img1c/x17.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x18.jpg"></a>
+                                <img src="img/img1c/x18.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x19.jpg"></a>
+                                <img src="img/img1c/x19.jpg">
                             </div>
                             <div class="item">
-                                <a href="album1.html"><img src="img/img1/x110.jpg"></a>
+                                <img src="img/img1c/x110.jpg">
                             </div>
                         </div>
                     </div>
@@ -255,13 +233,22 @@
                     <div class='carousel slide' data-ride='carousel'>
                         <div class='carousel-inner'>
                             <div class="item active">
-                                <a href="album2.html"><img src="img/img2/x21.jpg"></a>
+                                <img src="img/img2/1.jpg">
                             </div>
                             <div class="item">
-                                <a href="album2.html"><img src="img/img2/x22.jpg"></a>
+                                <img src="img/img2/2.jpg">
                             </div>
                             <div class="item">
-                                <a href="album2.html"><img src="img/img2/x23.jpg"></a>
+                                <img src="img/img2/3.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/img2/4.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/img2/5.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/img2/6.jpg">
                             </div>
                         </div>
                     </div>
@@ -278,20 +265,26 @@
                 <div class="thumbnail">
                     <div class='carousel slide' data-ride='carousel'>
                         <div class='carousel-inner'>
-                            <div class="item active" style='height:300px;overflow:hidden;'>
-                                <a href="album3.html"><img src="img/img6/x61.jpg"></a>
+                            <div class="item active">
+                                <img src="img/img6/x61.jpg">
                             </div>
-                            <div class="item" style='height:310px;overflow:hidden;'>
-                                <a href="album3.html"><img src="img/img6/x62.jpg"></a>
+                            <div class="item">
+                                <img src="img/img6/x62.jpg">
                             </div>
-                            <div class="item" style='height:310px;overflow:hidden;'>
-                                <a href="album3.html"><img src="img/img6/x63.jpg"></a>
+                            <div class="item">
+                                <img src="img/img6/x63.jpg">
                             </div>
-                            <div class="item" style='height:310px;overflow:hidden;'>
-                                <a href="album3.html"><img src="img/img6/x64.jpg"></a>
+                            <div class="item">
+                                <img src="img/img6/x64.jpg">
                             </div>
-                            <div class="item" style='height:310px;overflow:hidden;'>
-                                <a href="album3.html"><img src="img/img6/x65.jpg"></a>
+                            <div class="item">
+                                <img src="img/img6/x65.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/img6/x66.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/img6/x67.jpg">
                             </div>
                         </div>
                     </div>
@@ -312,19 +305,19 @@
                     <div class='carousel slide' data-ride='carousel'>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <a href="album4.html"><img src="img/img4/x41.jpg"></a>
+                                <img src="img/img4/x41.jpg">
                             </div>
                             <div class="item">
-                                <a href="album4.html"><img src="img/img4/x42.jpg"></a>
+                                <img src="img/img4/x42.jpg">
                             </div>
                             <div class="item">
-                                <a href="album4.html"><img src="img/img4/x43.jpg"></a>
+                                <img src="img/img4/x43.jpg">
                             </div>
                             <div class="item">
-                                <a href="album4.html"><img src="img/img4/x44.jpg"></a>
+                                <img src="img/img4/x44.jpg">
                             </div>
                             <div class="item">
-                                <a href="album4.html"><img src="img/img4/x45.jpg"></a>
+                                <img src="img/img4/x45.jpg">
                             </div>
                         </div>
                     </div>
@@ -340,13 +333,13 @@
                     <div class='carousel slide' data-ride='carousel'>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <a href="album5.html"><img src="img/img3/x31.jpg"></a>
+                                <img src="img/img3/x31.jpg">
                             </div>
                             <div class="item">
-                                <a href="album5.html"><img src="img/img3/x32.jpg"></a>
+                                <img src="img/img3/x32.jpg">
                             </div>
                             <div class="item">
-                                <a href="album5.html"><img src="img/img3/x33.jpg"></a>
+                                <img src="img/img3/x33.jpg">
                             </div>
                         </div>
                     </div>
@@ -371,7 +364,7 @@
                     <div class="col-md-5">
                         <h4>----心情日记<span class='glyphicon glyphicon-book'></h4></div>
                     <div class='col-md-1 pull-right'>
-                        <h4><a href="diary.html"><small>更多</small></a></h4></div>
+                        <h5><a href="diary.html">更多</a></h5></div>
                 </div>
             </div>
         </div>
@@ -381,96 +374,19 @@
                     <div class='panel-heading'>
                         <div class="row">
                             <div class="col-md-2">
-                                <span>日志列表</span>
                                 <span class='glyphicon glyphicon-list'></span>
+                                <span style='padding-left:5px;'>日志列表</span>
                             </div>
                             <div class="col-md-2 pull-right">
-                                <a href="" class='pull-right'>创建新日志 <span class='glyphicon glyphicon-edit'></span></a>
+                                <a href="" class='pull-right' style='padding:0px;'>
+                                    <span style='padding-left:5px;'>创建新日志</span>
+                                </a>
+                                <span class='glyphicon glyphicon-edit pull-right' style='padding-top:2px;'></span>
                             </div>
                         </div>
                     </div>
                     <div class='panel-body'>
-                        <table class='table table-bordered'>
-                            <thead>
-                                <td>#</td>
-                                <td>名称</td>
-                                <td>时间</td>
-                                <!-- <td>操作</td> -->
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td><a href="diary.html">奋斗的青春</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td><a href="diary2.html">迷茫,才是青春应该有的样子</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td><a href="diary3.html">淡淡时光,美丽心情！</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td><a href="diary4.html">生活,温暖如花</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td><a href="diary5.html">第五篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td><a href="diary6.html">第六篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td><a href="diary7.html">第七篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td><a href="diary8.html">第八篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td><a href="diary9.html">第九篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td><a href="diary10.html">第十篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td><a href="diary11.html">第十一篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
-                    <!-- <ul class='pager' style='margin-top:0px;position:absolute;top:540px;left:510px;'>
-                        <li class='disabled'><a>上一页</a></li>
-                        <li class='disabled'><a>下一页</a></li>
-                    </ul> -->
                 </div>
             </div>
         </div>
@@ -488,7 +404,7 @@
                         <h4>----我爱唱歌<span class='glyphicon glyphicon-music'></span></h4>
                     </div>
                     <div class='col-md-1 pull-right'>
-                        <h4><a href="music.html"><small>更多</small></a></h4>
+                        <h5><a href="music.html">更多</a></h5>
                     </div>
                 </div>
             </div>
@@ -544,7 +460,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="img/musicimg1/3.jpg" style='height:111px;width:111px;' class='pull-right listen-feng'></span>
+                            <span><img src="img/music-list/1.jpg" style='height:111px;width:111px;' class='pull-right listen-feng'></span>
                         </div>
                     </div>
                     <div class="row" style='padding-top:30px;padding-left:30px;'>
@@ -552,28 +468,28 @@
                             <div class='class="jp-playlist"'>
                                 <ul class='music-ul' style='list-style:none;'>
                                     <li>
-                                        <a><img src="img/musicimg1/3.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/1.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/4.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/2.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/5.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/3.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/6.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/4.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/7.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/5.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/8.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/6.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/9.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/7.jpg" class='music-feng'></a>
                                     </li>
                                     <li>
-                                        <a><img src="img/musicimg1/10.jpg" class='music-feng'></a>
+                                        <a><img src="img/music-list/8.jpg" class='music-feng'></a>
                                     </li>
                                 </ul>
                             </div>
@@ -593,111 +509,34 @@
             <div class='col-md-10 col-md-offset-1'>
                 <div class='row'>
                     <div class="col-md-5">
-                        <h4>----Web前端笔记<span class='glyphicon glyphicon-pencil'></span></h4>
+                        <h4>----我的小游戏<span class='glyphicon glyphicon-piggy-bank'></span></h4>
                     </div>
                     <div class='col-md-1 pull-right'>
-                        <h4><a href=""><small>更多</small></a></h4>
+                        <h5><a href="">更多</a></h5>
                     </div>
                 </div>
             </div>
         </div>
         <div class='row'>
             <div class='col-md-10 col-md-offset-1'>
-                <div class='panel panel-default'>
-                    <div class='panel-heading'>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <span>笔记列表</span>
-                                <span class='glyphicon glyphicon-list'></span>
-                            </div>
-                            <div class="col-md-2 pull-right">
-                                <a href="" class='pull-right'>创建新笔记<span class='glyphicon glyphicon-edit'></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='panel-body'>
-                        <table class='table table-bordered'>
-                            <thead>
-                                <td>#</td>
-                                <td>名称</td>
-                                <td>时间</td>
-                                <!-- <td>操作</td> -->
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td><a href="">第一篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td><a href="">第二篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td><a href="">第三篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td><a href="">第四篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td><a href="">第五篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td><a href="">第六篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td><a href="">第七篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td><a href="">第八篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td><a href="">第九篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td><a href="">第十篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td><a href="">第十一篇</a></td>
-                                    <td>2015-6-1</td>
-                                    <!-- <td><a href="">编辑</a></td> -->
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- <ul class='pager' style='margin-top:0px;position:absolute;top:540px;left:510px;'>
-                        <li><a href="">上一页</a></li>
-                        <li><a href="">下一页</a></li>
-                    </ul> -->
-                </div>
+            </div>
+        </div>
+    </div>
+    <div class='box1' id='person'>
+        <div class='row'>
+            <div class='col-md-2' style='padding-top:70px;padding-left:50px;'>
+                <h1>个人简历</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-5 col-md-offset-1'>
+                <h4><a href="resume.html">----详细简历</a></h4>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-8 col-md-offset-2' style='text-align:center;margin-top:200px;'>
+                <h1 style='color:#00bbff'>Who am I?</h1>
+                <p>爱学习 爱运动 爱生活</p>
             </div>
         </div>
     </div>
@@ -708,24 +547,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
-// $(function() {                                                           //淡入淡出效果。jquery实现
-//     $(".box2").fadeOut(0).eq(0).fadeIn(0); //先隐藏所有图片，再将对象移到第一张图片，使之淡入
-//     var i = 0; //初始化图片的索引值
-//     setInterval(function() { //setInterval是每隔一段时间循环一个动作
-//         if ($(".box2").length > (i + 1)) { //判断是否执行到最后一张图片
-//             $(".box2").eq(i).fadeOut(5000).next("img").fadeIn(5000);
-
-//             //索引值为i的图片淡出，它的下一张图片淡入
-//             i++; //使索引值增加1，下一次执行动作的图片索引值为i+1，
-//         } else { //如果为最后一张图片，将执行下面的代码
-//             $(".box2").eq(i).fadeOut(5000);
-//             $('.box2').eq(0).fadeIn(5000); //索引值为i的图片淡出，这里不同于上面，是第一张图片淡入
-//             i = 0; //将索引值变为0，回到初始状态
-//         }
-//     }, 5000); //5000ms执行一次淡入淡出的动作
-// })
-
-
 window.onload = function() {
     //照片墙代码部分
     var oDiv1 = document.getElementById('show');
@@ -860,40 +681,34 @@ window.onload = function() {
     }
 
     function getDis(obj1, obj2) {
-        var disX = obj1.offsetLeft - obj2.offsetLeft;
-        var disY = obj1.offsetTop - obj2.offsetTop;
-        var distance = Math.sqrt(disX * disX + disY * disY);
-        return distance;
-    }
+            var disX = obj1.offsetLeft - obj2.offsetLeft;
+            var disY = obj1.offsetTop - obj2.offsetTop;
+            var distance = Math.sqrt(disX * disX + disY * disY);
+            return distance;
+        }
+        //异步加载日志列表部分代码
 
+    $.ajax({
+            url: 'blogdiary.json',
+            type: 'GET',
+            dataType: 'json',
 
-    // //试听部分代码
-    // var oListen = document.getElementsByClassName('listen');
-    // var oAudio = document.getElementsByTagName('audio');
-    // var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3'];
-    // for (var m = 0; m < oListen.length; m++) {
-    //     oListen[m].index = m;
-    //     oListen[m].onclick = function() {
-
-    //         for (var n = 0; n < oListen.length; n++) {
-    //             if (n == this.index) {
-
-    //                 oAudio[this.index].src = arr[this.index]; //必须要加上src，否则是播放不了的，尽管在布局中已经给src值了
-    //                 oAudio[this.index].autoplay = 'autoplay';
-    //             } else {
-    //                 oAudio[n].src = '';
-    //                 //想做到同一时间只能播放一首歌，没点暂停时不会给播放其他歌造成干扰，但是这样只有点试听才加载
-    //             }
-    //         }
-    //     }
-    // }
+        })
+        .done(function(list) {
+            console.log("success", list);
+            $('.panel-body').append("<table class='table table-bordered' id='diarytable'></table>"); //用类取没取到。咋回事
+            $('#diarytable').append('<tr><td>编号</td><td>日志名称</td><td>时间</td></tr>')
+            for (t = 0; t < list.diarylist.length; t++) {
+                $('#diarytable').append("<tr><td>" + list.diarylist[t].number + "</td><td><a href='diary.html'>" + list.diarylist[t].title + "</a></td><td>" + list.diarylist[t].time + "</td></tr>"); //变量不能用双引号引上，一定是标签用双引号引上,注意双引号和单引号区分开，标签双引号，属性单引号
+            }
+        })
 
     //音乐播放插件代码
     var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3', 'music/river.mp3', 'music/flower.mp3'];
     var musicname = ['明天你好 &nbsp演唱:小雪 小杜', '半个月亮爬上来 &nbsp演唱:小雪 小杜', '送别 &nbsp演唱:小雪 小杜', '我要的飞翔 &nbsp演唱:小雪', '风中有朵雨做的云 &nbsp演唱:小雪', '大手拉小手 &nbsp演唱:小雪 小杜', '外婆的澎湖湾 &nbsp演唱:小雪 小杜', '夜来香 &nbsp演唱:小雪 小杜'];
     var oListen = document.getElementsByClassName('music-feng');
     var oListenImg = document.getElementsByClassName('pull-right listen-feng')[0];
-    var arrImg = ['img/musicimg1/3.jpg', 'img/musicimg1/4.jpg', 'img/musicimg1/5.jpg', 'img/musicimg1/6.jpg', 'img/musicimg1/7.jpg', 'img/musicimg1/8.jpg', 'img/musicimg1/9.jpg', 'img/musicimg1/10.jpg'];
+    var arrImg = ['img/music-list/1.jpg', 'img/music-list/2.jpg', 'img/music-list/3.jpg', 'img/music-list/4.jpg', 'img/music-list/5.jpg', 'img/music-list/6.jpg', 'img/music-list/7.jpg', 'img/music-list/8.jpg'];
     var oPrevious = document.getElementsByClassName('jp-previousxt');
     var oNext = document.getElementsByClassName('jp-next');
     console.log(oNext);
@@ -921,24 +736,8 @@ window.onload = function() {
                         mp3: arr[this.index]
 
                     }).jPlayer('play');
-
-                    // oNext.onclick=function(){//不能加事件
-                    //    console.log(oNext);
-                    //     var order=that.index++;
-                    //     $("#jquery_jplayer_1").jPlayer("setMedia", {
-                    //     title: musicname[order],
-                    //     // m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-                    //     // oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-                    //     mp3: arr[order]
-
-                    // }).jPlayer('play');
-                    // }
-
                 }
             }
-
-
-
         },
         swfPath: "js",
         supplied: "m4a, oga,mp3",
@@ -951,17 +750,11 @@ window.onload = function() {
         toggleDuration: true
     });
 
-
-
-
-
-
-
-    //照片以及歌曲点赞部分代码,没办法吧xxblog和music以及picture的
+    //照片点赞部分代码
 
     var oLove = document.getElementsByClassName('glyphicon glyphicon-heart love');
     var oLoveNum = document.getElementsByClassName('badge lovenum');
-    for (var p = 0; p < 5; p++) {
+    for (var p = 0; p < oLove.length; p++) {
         oLove[p].index = p;
         oLove[p].onclick = function() {
             oLoveNum[this.index].innerHTML = parseInt(oLoveNum[this.index].innerHTML) + 1;
@@ -972,22 +765,7 @@ window.onload = function() {
         } else {
             oLoveNum[p].innerHTML = localStorage.getItem(p);
         }
-
     }
-    // for (var q = 0; q < 6; q++) {
-    //     if (!localStorage.getItem(q + 12)) {
-    //         oLoveNum[q + 5].innerHTML = 20;
-    //     } else {
-    //         oLoveNum[q + 5].innerHTML = localStorage.getItem((q + 12));
-    //     }
-    //     oLove[q + 5].index = q;
-    //     oLove[q + 5].onclick = function() {
-    //         oLoveNum[this.index + 5].innerHTML = parseInt(oLoveNum[this.index + 5].innerHTML) + 1;
-    //         localStorage.setItem((this.index + 12), oLoveNum[this.index + 5].innerHTML);
-    //     }
-
-    // }
-
 }
 </script>
 
