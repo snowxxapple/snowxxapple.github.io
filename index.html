@@ -88,7 +88,6 @@
         border: 1px solid white;
         border-radius: 5px;
     }
-
     </style>
 </head>
 
@@ -426,11 +425,17 @@
                 </div>
                 <div class="col-md-6 col-md-offset-2">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-2" style='padding:0px;margin-right:14px;z-index:100;' id='song'>
+                            <div style='width:100%;'>
+                                <img src="img/music-list/1.jpg" class='listen-feng'>
+                            </div>
+                        </div>
+                        <div class="col-md-9" style='padding:0px;'>
                             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-                            <div id="jp_container_1" class="jp-audio pull-right" role="application" aria-label="media player">
+                            <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
                                 <div class="jp-type-single">
                                     <div class="jp-gui jp-interface">
+                                    
                                         <div class="jp-controls">
                                             <button class="jp-play" role="button" tabindex="0">play</button>
                                             <button class="jp-stop" role="button" tabindex="0">stop</button>
@@ -463,10 +468,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="img/music-list/1.jpg" style='height:111px;width:111px;' class='pull-right listen-feng'></span>
                         </div>
                     </div>
-                    <div class="row" style='padding-top:30px;padding-left:30px;'>
+                    <div class="row" style='padding-top:30px;'>
                         <div class="col-md-12">
                             <div class='class="jp-playlist"'>
                                 <ul class='music-ul' style='list-style:none;'>
@@ -559,6 +563,12 @@ window.onload = function() {
     var aLeft = new Array();
     var aTop = new Array();
     var iMinzindex = 2;
+
+    // var oPlayerHeight=$('.jp-type-single');
+    // var oList=document.getElementById('song');
+
+    // console.log(oPlayerHeight);//读不到
+    // oList.style.height=oPlayerHeight.offsetWidth+'px';
 
     for (i = 0; i < oDiv.length; i++) //把div当前的位置存到数组中 布局转换，把文档流定位转化为绝对定位
     {
@@ -710,7 +720,7 @@ window.onload = function() {
     var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3', 'music/river.mp3', 'music/flower.mp3'];
     var musicname = ['明天你好 &nbsp演唱:小雪 小杜', '半个月亮爬上来 &nbsp演唱:小雪 小杜', '送别 &nbsp演唱:小雪 小杜', '我要的飞翔 &nbsp演唱:小雪', '风中有朵雨做的云 &nbsp演唱:小雪', '大手拉小手 &nbsp演唱:小雪 小杜', '外婆的澎湖湾 &nbsp演唱:小雪 小杜', '夜来香 &nbsp演唱:小雪 小杜'];
     var oListen = document.getElementsByClassName('music-feng');
-    var oListenImg = document.getElementsByClassName('pull-right listen-feng')[0];
+    var oListenImg = document.getElementsByClassName('listen-feng')[0];
     var arrImg = ['img/music-list/1.jpg', 'img/music-list/2.jpg', 'img/music-list/3.jpg', 'img/music-list/4.jpg', 'img/music-list/5.jpg', 'img/music-list/6.jpg', 'img/music-list/7.jpg', 'img/music-list/8.jpg'];
     var oPrevious = document.getElementsByClassName('jp-previousxt');
     var oNext = document.getElementsByClassName('jp-next');
@@ -729,7 +739,12 @@ window.onload = function() {
             for (x = 0; x < oListen.length; x++) {
                 oListen[x].index = x;
                 oListen[x].onclick = function() {
+                    for(y=0;y<oListen.length;y++)
+                    {
+                        $(oListen[y]).css('outline', '');
+                    }
                     var that = this;
+                    $(this).css('outline', '3px solid pink');
                     oListenImg.src = arrImg[this.index];
 
                     $("#jquery_jplayer_1").jPlayer("setMedia", {
