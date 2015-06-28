@@ -46,12 +46,14 @@
     .box2 {
         position: absolute;
         z-index: 1;
-        width: 530px;
-        height: 530px;
-    }
+        width: 100%;
+       }
     
     .listen {
         cursor: pointer;
+    }
+    html{
+        overflow-y:hidden;
     }
     </style>
 </head>
@@ -75,9 +77,9 @@
     <div class='box1'>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 sbj" style='padding-left:0px;padding-right:0px;'>
+                <div class="col-md-3 col-lg-3 sbj" style='padding-left:0px;padding-right:0px;'>
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-12 col-lg-10">
                             <ul class='list-group' style='text-align:center;'>
                                 <li class='list-group-item'>
                                     <h5><strong>音乐列表</strong><span class='badge' style='background:#cce;margin-left:10px;'>9</span></h5>
@@ -147,39 +149,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 sbj">
+                <div class="col-md-8 col-md-offset-1 col-lg-9 col-lg-offset-0 sbj">
                     <div class="row">
-                        <div class="panel panel-default" style='height:650px;'>
+                        <div class="panel panel-default" style='width:100%;'>
                             <div class="row">
-                                <div class="col-md-8" style='padding:15px;'>
-                                    <div style='height:530px;width:530px;margin-left:15px;'>
+                                <div class="col-md-8 col-lg-7" style='padding:15px;'>
+                                    <div style='width:100%;margin-left:15px;vertical-align:middle;'>
                                         <!-- 直接添加图片，列的高度不包含图片是怎么回事 -->
-                                        <img src="img/musicimg1/1.jpg" class='img box2 img-rounded'>
-                                        <img src="img/musicimg1/2.jpg" class='img box2 img-rounded'>
-                                        <img src="img/musicimg1/3.jpg" class='img box2 img-rounded'>
-                                        <img src="img/musicimg1/4.jpg" class='img box2 img-rounded'>
+                                        <img src="img/musicimg1/1.jpg" class='img box2 img-rounded' style='width:100%;'>
+                                        <img src="img/musicimg1/2.jpg" class='img box2 img-rounded'style='width:100%;'>
+                                        <img src="img/musicimg1/3.jpg" class='img box2 img-rounded'style='width:100%;'>
+                                        <img src="img/musicimg1/4.jpg" class='img box2 img-rounded'style='width:100%;'>
                                     </div>
                                 </div>
-                                <div class="col-md-4" style='padding-top:20px;'>
+                                <div class="col-md-4 col-lg-5" style='padding-top:20px;padding-left:10px;'>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-10 col-md-offset-2">
                                             <div class="row">
                                                 <div class="col-md-11" style='padding:0px;'>
                                                     <!-- 没加padding，但不知道谁加的 -->
-                                                    <h4 class='name'>歌曲名: 明天你好</h4>
-                                                    <h5 class='actor'>演唱者: 小雪 小杜</h5>
+                                                    <h4 class='name' style='margin:0px;margin-bottom:5px;'>歌曲名: 明天你好</h4>
+                                                    <h5 class='actor' style='margin:0px;margin-bottom:5px;'>演唱者: 小雪 小杜</h5>
                                                 </div>
                                             </div>
                                             <div class='row'>
                                                 <div class="col-md-11">
                                                     <div class="row">
-                                                        <h5>歌词:</h5>
+                                                        <h5 style='margin:0px;margin-bottom:5px;'>歌词:</h5>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class='row'>
                                                 <div class="col-md-11" style='padding:0px;'>
-                                                    <div class='panel panel-info' style='padding:5px;margin-right:10px;height:430px;overflow:auto;'>
+                                                    <div class='panel panel-info' style='padding:5px;margin-right:10px;height:450px;overflow:auto;'>
                                                         <p class='geci'>
                                                             看昨天的我们 走远了 在命运广场中央 等待 那模糊的 肩膀 越奔跑 越渺小 曾经 并肩往前的 伙伴 在举杯 祝福后都 走散 只是那个 夜晚 我深深 的都留藏在心坎 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着 奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 勇敢是什么 当我朝着反方向走去 在楼梯的角落 找勇气 抖着肩膀 哭泣 问自己 在哪里 曾经 并肩往前 的伙伴 沉默着 懂得我的委屈 时间它总说谎 我从 不曾失去 那些肩膀 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 勇敢是什么
                                                         </p>
@@ -191,7 +193,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-8" style='padding-left:30px;'>
+                                <div class="col-md-8" style='padding-left:30px;padding-bottom:10px;'>
                                     <!-- 图片的padding是15，而播放器是15就与容器边距不同 -->
                                     <audio src='music/tomorrow.mp3' controls='controls'></audio>
                                 </div>
