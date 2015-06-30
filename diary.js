@@ -12,14 +12,7 @@ if(localStorage.getItem(30)==1)
  }
     var oBack = document.getElementsByClassName('pull-right back-color');
     var oLi = document.getElementsByClassName('list-group-item');
-    //主题风格
-    if(theme==1){
-        $('#theme-link').attr('href', '');
-    }
-    if(theme==2){
-        $('#theme-link').attr('href', 'css/blog.css');
-    }
-
+    
 
     $.ajax({ //加载日志列表
             url: 'diarylist.json',
