@@ -9,6 +9,8 @@
     <title>我的相册</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="" id='theme-link'>
+    <link rel="stylesheet" type="text/css" href="" id='theme-link-ori'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,14 +22,7 @@
         margin-top: 18px;
     }
     
-    .box1 {
-        width: 100%;
-        height: 749px;
-        margin: 0px;
-        padding: 0px;
-        z-index: -1;
-        background: url(img/b4.jpg);
-    }
+    
     
     html {
         overflow-x: hidden;
@@ -44,7 +39,8 @@
     
     .xpsize {
         height: 270px;
-        width: 100%;
+        /*width: 100%;*/
+        
         overflow: hidden;
     }
     
@@ -66,13 +62,20 @@
     a {
         cursor: pointer;
     }
-    html{
-        overflow-y:hidden;
+    
+    html {
+        overflow-y: hidden;
     }
+    
+    .kong {
+        text-decoration: none!important;
+    }
+    
+    
     </style>
 </head>
 
-<body style='padding-top:50px;'>
+<body>
     <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
         <div class="container">
             <div class='navbar-header' style='width:150px;'>
@@ -90,62 +93,62 @@
     </nav>
     <div class='box1'>
         <div class='container'>
-            <div class="row">
+            <div class="row" style='margin-top:50px;'>
                 <div class="col-md-3 sbj" style='padding-left:0px;padding-right:0px;'>
                     <div class="col-md-10">
-                    <ul class="list-group" style='text-align:center;'>
-                        <li class='list-group-item'>
-                            <h5><strong>相册列表</strong><span class='badge' style='background:#cce;margin-left:10px;'>6</span></h5>
-                        </li>
-                        <li class="list-group-item">
-                            <span>
+                        <ul class="list-group" style='text-align:center;'>
+                            <li class='list-group-item'>
+                                <h5><strong>相册列表</strong><span class='badge' style='background:#cce;margin-left:10px;'>6</span></h5>
+                            </li>
+                            <li class="list-group-item">
+                                <span>
                             <a class='kong'>彩铅</a>
                         </span><span class='lovenum pull-right'>20</span>
-                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
-                        </li>
-                        <li class="list-group-item">
-                            <span>
+                                <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                            </li>
+                            <li class="list-group-item">
+                                <span>
                             <a class='kong'>手工艺品</a>
                         </span>
-                            <span class='lovenum pull-right'>20</span>
-                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
-                        </li>
-                        <li class="list-group-item">
-                            <span>
+                                <span class='lovenum pull-right'>20</span>
+                                <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                            </li>
+                            <li class="list-group-item">
+                                <span>
                             <a class='kong'>校园歌手大赛</a>
                         </span>
-                            <span class='lovenum pull-right'>20</span>
-                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
-                        </li>
-                        <li class="list-group-item">
-                            <span>
+                                <span class='lovenum pull-right'>20</span>
+                                <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                            </li>
+                            <li class="list-group-item">
+                                <span>
                             <a  class='kong'>文艺生活</a>
                         </span>
-                            <span class='lovenum pull-right'>20</span>
-                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
-                        </li>
-                        <li class="list-group-item">
-                            <span>
+                                <span class='lovenum pull-right'>20</span>
+                                <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                            </li>
+                            <li class="list-group-item">
+                                <span>
                             <a  class='kong'>小雪的菜单</a>
                         </span>
-                            <span class='lovenum pull-right'>20</span>
-                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
-                        </li>
-                        <li class="list-group-item">
-                            <span>
+                                <span class='lovenum pull-right'>20</span>
+                                <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                            </li>
+                            <li class="list-group-item">
+                                <span>
                             <a  class='kong'>毕业纪念册</a>
                         </span>
-                            <span class='lovenum pull-right'>20</span>
-                            <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
-                        </li>
-                        <li class='list-group-item' style='height:57px;'>
-                            <ul class='pager' style='margin-top:2px;'>
-                                <li><a id='up' style='padding-right:10px;padding-left:10px;' class='pull-left'>上一页</a></li>
-                                <li><a id='down' style='padding-right:10px;padding-left:10px;' class='pull-right'>下一页</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                                <span class='lovenum pull-right'>20</span>
+                                <a class='zan'><span class='glyphicon glyphicon-heart love pull-right'></span></a>
+                            </li>
+                            <li class='list-group-item' style='height:57px;'>
+                                <ul class='pager' style='margin-top:2px;'>
+                                    <li><a id='up' style='padding-right:10px;padding-left:10px;' class='pull-left'>上一页</a></li>
+                                    <li><a id='down' style='padding-right:10px;padding-left:10px;' class='pull-right'>下一页</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-9 sbj">
                     <div class="row" style='margin-top:0px;'>
@@ -235,6 +238,17 @@ window.onload = function() {
     var flag = 1; //flag代表现在列表在第几页，1为第一页列表，2位第二页列表
     love(1);
     albumClick(1);
+
+if(localStorage.getItem(30)==1)
+ {
+    $('#theme-link').attr('href', '');
+    $('#theme-link-ori').attr('href','css/blog-ori.css');
+ }
+ if(localStorage.getItem(30)==2)
+ {
+     $('#theme-link').attr('href', 'css/blog.css');
+     $('#theme-link-ori').attr('href','');
+ }
     oDown.onclick = function() {
         love(2);
     }
@@ -249,9 +263,10 @@ window.onload = function() {
             localStorage.getItem(i);
         }
     }
-   function love(flag) {
+
+    function love(flag) {
         var zanNumber;
-        var zanxNumber;//根据flag的值来判断是第一页还是第二页，从而读取相应的localstorage的值
+        var zanxNumber; //根据flag的值来判断是第一页还是第二页，从而读取相应的localstorage的值
         for (i = 0; i < oIcon.length; i++) {
             oIcon[i].index = i;
             if (flag == 1) {
@@ -263,14 +278,12 @@ window.onload = function() {
                 oLi[0].className = 'active';
             }
             oIcon[i].onclick = function() {
-                if(flag==1)
-                {
-                    zanNumber=this.index;
+                if (flag == 1) {
+                    zanNumber = this.index;
                 }
-                if(flag==2)
-                {
-                    zanNumber=this.index+6;
-                }                
+                if (flag == 2) {
+                    zanNumber = this.index + 6;
+                }
                 oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
                 oNumx[this.index].innerHTML = parseInt(oNumx[this.index].innerHTML) + 1;
 
@@ -278,16 +291,14 @@ window.onload = function() {
             }
         }
         for (m = 0; m < oIcon.length; m++) {
-            oIconx[m].index = m;//这行报错了，没明白错在何处
+            oIconx[m].index = m; //这行报错了，没明白错在何处
             oIconx[m].onclick = function() {
-                if(flag==1)
-                {
-                    zanxNumber=this.index;
+                if (flag == 1) {
+                    zanxNumber = this.index;
                 }
-                if(flag==2)
-                {
-                    zanxNumber=this.index+6;
-                }                
+                if (flag == 2) {
+                    zanxNumber = this.index + 6;
+                }
                 oNumx[this.index].innerHTML = parseInt(oNumx[this.index].innerHTML) + 1;
                 oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
                 saveLocalStorage(zanxNumber, oNumx[this].innerHTML); //用多个键值对来存储每个list的获得点赞数
@@ -295,21 +306,21 @@ window.onload = function() {
         }
         for (j = 0; j < oIcon.length; j++) { //读取键值对中的数值
             var oNumber;
-            if(flag==1)
-            {
-                oNumber=j;
+            if (flag == 1) {
+                oNumber = j;
             }
-            if(flag==2)
-            {
-                oNumber=j+6;
+            if (flag == 2) {
+                oNumber = j + 6;
             }
             oNum[j].innerHTML = localStorage.getItem(oNumber);
             oNumx[j].innerHTML = localStorage.getItem(oNumber);
         }
     }
+
     function saveLocalStorage(key, value) { //存储键值对，实际上直接用localstorage就行，这样写是为了体现localst的用法
         localStorage.setItem(key, value);
     }
+
     function albumClick(flag) {
         var oAlbumCol = document.getElementsByClassName('kong');
         var oAlbum = document.getElementsByClassName('kong1');
@@ -400,7 +411,7 @@ window.onload = function() {
                                 }
                             })
                     });
-                });                
+                });
             }
         }
     }
@@ -441,4 +452,5 @@ window.onload = function() {
     });
 }
 </script>
+
 </html>

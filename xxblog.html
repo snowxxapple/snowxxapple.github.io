@@ -10,6 +10,8 @@
     <title>xxblog</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="" id='theme-link'>
+    <link rel="stylesheet" type="text/css" href="" id='theme-link-ori'>
     <link rel="stylesheet" type="text/css" href="js/jPlayer/skin/css/jplayer.blue.monday.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,14 +20,14 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-    .box1 {
+    /*.box1 {
         width: 100%;
         height: 799px;
         margin: 0px;
         padding: 0px;
         z-index: -1;
         background: url(img/b4.jpg);
-    }
+    }*/
     /*.box2 {
         position: absolute;
         z-index: 1;
@@ -77,7 +79,7 @@
     .music-feng {
         height: 100px;
         width: 100px;
-        border: 1px solid white;
+        border: 1px solid rgba(255, 255, 255, 0);
         border-radius: 5px;
         margin: 0px;
     }
@@ -87,6 +89,21 @@
         margin: 2px;
         border: 1px solid white;
         border-radius: 5px;
+    }
+    
+    .nav-pad {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    .a-pad {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    
+    .dropdown {
+        margin-left: 15px !important;
+        margin-right: 0px !important;
     }
     </style>
 </head>
@@ -99,42 +116,50 @@
                 <p style='margin-top:15px;'>小雪喜欢下雪天</p>
             </div>
             <ul class='nav navbar-nav pull-right'>
-                <li><a href="#photoshow">首页</a></li>
-                <li><a href="#life1">爱生活</a></li>
+                <li class='nav-back'><a href="#photoshow" class='nav-pad'>首页</a></li>
+                <li class='nav-back'><a href="#life1" class='nav-pad'>爱生活</a></li>
                 <li class='dropdown' style='position:relative;left:-15px;'>
-                    <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span>
+                    <a href="" data-toggle='dropdown' class='dropdown-toggle a-pad'><span class='caret'></span></a>
                     <ul class='dropdown-menu'>
                         <li><a href="#life1">照片日记</a></li>
-                <li><a href="#life2">心情日记</a></li>
-                <li class='divider'></li>
-                <li><a href="picture.html">我的相册</a></li>
-                <li><a href="diary.html">我的日志</a></li>
-            </ul>
-            </li>
-            <li><a href="#music" style='padding-left:0px;'>爱音乐</a></li>
-            <li class='dropdown' style='position:relative;left:-15px;'>
-                <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
-                <ul class='dropdown-menu'>
-                    <li><a href="music.html">我的音乐</a></li>
-                </ul>
-            </li>
-            <li><a href="#study" style='padding-left:0px;'>爱学习</a></li>
-            <li class='dropdown' style='position:relative;left:-15px;'>
-                <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
-                <ul class='dropdown-menu'>
-                    <li><a href="">网页游戏</a></li>
-                </ul>
-            </li>
-            <li><a href="#person" style='padding-left:0px;'>个人简历</a></li>
-            <li class='dropdown' style='position:relative;left:-15px;'>
-                <a href="" data-toggle='dropdown' class='dropdown-toggle'><span class='caret'></span></a>
-                <ul class='dropdown-menu'>
-                    <li><a href="resume.html">详细简历</a></li>
-                </ul>
-            </li>
-            <li>
-                <iframe width="200" scrolling="no" height="45" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=4&py=xian&num=5"></iframe>
-            </li>
+                        <li><a href="#life2">心情日记</a></li>
+                        <li class='divider'></li>
+                        <li><a href="picture.html">我的相册</a></li>
+                        <li><a href="diary.html">我的日志</a></li>
+                    </ul>
+                </li>
+                <li class='nav-back'><a href="#music" style='padding-left:0px;' class='nav-pad'>爱音乐</a></li>
+                <li class='dropdown' style='position:relative;left:-15px;'>
+                    <a href="" data-toggle='dropdown' class='dropdown-toggle a-pad'><span class='caret'></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="music.html">我的音乐</a></li>
+                    </ul>
+                </li>
+                <li class='nav-back'><a href="#study" style='padding-left:0px;' class='nav-pad'>爱学习</a></li>
+                <li class='dropdown' style='position:relative;left:-15px;'>
+                    <a href="" data-toggle='dropdown' class='dropdown-toggle a-pad'><span class='caret'></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="">网页游戏</a></li>
+                    </ul>
+                </li>
+                <li class='nav-back'><a href="#person" style='padding-left:0px;' class='nav-pad'>个人简历</a></li>
+                <li class='dropdown' style='position:relative;left:-15px;'>
+                    <a href="" data-toggle='dropdown' class='dropdown-toggle a-pad'><span class='caret'></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="resume.html">详细简历</a></li>
+                    </ul>
+                </li>
+                <li class='nav-back'>
+                    <a class='nav-pad dropdown-toggle' data-toggle='dropdown' style='margin-right:10px;'>主题</a>
+                    <ul class='dropdown-menu'>
+                        <li><a id='theme1'>彩铅世界</a></li>
+                        <li class='divider'></li>
+                        <li><a id='theme2'>飞舞的蒲公英</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <iframe width="200" scrolling="no" height="45" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=4&py=xian&num=5"></iframe>
+                </li>
             </ul>
         </div>
     </nav>
@@ -178,7 +203,7 @@
                         <h4>----照片日记<span class='glyphicon glyphicon-camera'></span></h4>
                     </div>
                     <div class='col-md-1 pull-right'>
-                        <h5><a href="picture.html">更多</a></h5>
+                        <h5><a href="picture.html" class='more'>更多</a></h5>
                     </div>
                 </div>
             </div>
@@ -223,7 +248,7 @@
                     <div class='caption'>
                         <h3>我爱彩铅</h3>
                         <p>无意间在图书馆发现了一本彩铅的教程，从此便爱上了彩铅~</p>
-                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span></a><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></p>
                     </div>
                 </div>
             </div>
@@ -254,9 +279,8 @@
                     <div class='caption'>
                         <h3>我的手工艺品们</h3>
                         <p>平时喜欢做一些小工艺品~</p>
-                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small>
-
-                        </a></p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span></a><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -290,7 +314,7 @@
                     <div class='caption'>
                         <h3>校园歌手大赛</h3>
                         <p>2014年的夏天，和舍友一起组队参加了校园歌手大赛和毕业晚会，这也是我大学生活中最绚丽的色彩！</p>
-                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span></a><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></p>
                     </div>
                 </div>
             </div>
@@ -326,7 +350,7 @@
                     <div class='caption'>
                         <h3>我的文艺生活</h3>
                         <p>Dance for you舞团,我是舞团财务总监~</p>
-                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum1 lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span></a><span class='badge lovenum1 lovenum'>26</span><small>喜欢就赞一下吧</small></p>
                     </div>
                 </div>
             </div>
@@ -348,7 +372,7 @@
                     <div class='caption'>
                         <h3>小雪的菜单</h3>
                         <p>喜欢做一些小点心、蜜饯</p>
-                        <p><a><span class='glyphicon glyphicon-heart love'></span><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></a></p>
+                        <p><a><span class='glyphicon glyphicon-heart love'></span></a><span class='badge lovenum'>26</span><small>喜欢就赞一下吧</small></p>
                     </div>
                 </div>
             </div>
@@ -366,7 +390,7 @@
                     <div class="col-md-5">
                         <h4>----心情日记<span class='glyphicon glyphicon-book'></h4></div>
                     <div class='col-md-1 pull-right'>
-                        <h5><a href="diary.html">更多</a></h5></div>
+                        <h5><a href="diary.html"  class='more'>更多</a></h5></div>
                 </div>
             </div>
         </div>
@@ -379,12 +403,12 @@
                                 <span class='glyphicon glyphicon-list'></span>
                                 <span style='padding-left:5px;'>日志列表</span>
                             </div>
-                            <div class="col-md-2 pull-right">
+                            <!-- <div class="col-md-2 pull-right">
                                 <a href="" class='pull-right' style='padding:0px;'>
                                     <span style='padding-left:5px;'>创建新日志</span>
                                 </a>
                                 <span class='glyphicon glyphicon-edit pull-right' style='padding-top:2px;'></span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class='panel-body'>
@@ -403,10 +427,10 @@
             <div class='col-md-10 col-md-offset-1'>
                 <div class="row">
                     <div class="col-md-5">
-                        <h4>----我爱唱歌<span class='glyphicon glyphicon-music'></span></h4>
+                        <h4 class='sencondTitle'>----我爱唱歌<span class='glyphicon glyphicon-music'></span></h4>
                     </div>
                     <div class='col-md-1 pull-right'>
-                        <h5><a href="music.html">更多</a></h5>
+                        <h5><a href="music.html"  class='more'>更多</a></h5>
                     </div>
                 </div>
             </div>
@@ -417,10 +441,10 @@
                     <div style='margin-top:50px;'>
                         <h4 class='intr'>这里收录的有自己唱的歌</h4>
                         <h4 class='intr'>也有和好朋友一起唱的歌</h4>
-                        <h4 class='intr' class='intr' class='intr'>有独唱,也有和声~</h4>
-                        <h4 class='intr' class='intr'>这里的歌都是用唱吧录的~</h4>
+                        <h4 class='intr'>有独唱,也有和声~</h4>
+                        <h4 class='intr'>这里的歌都是用唱吧录的~</h4>
                         <h4 class='intr'>欢迎大家关注我的<strong><i>唱吧号:</i></strong></h4>
-                        <h4 style='color:#EE82EE' class='intr'><strong><i>小雪喜欢下雪天</i></strong></h4>
+                        <h4 class='intr' id='songNumber'><strong><i>小雪喜欢下雪天</i></strong></h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-md-offset-2">
@@ -435,7 +459,6 @@
                             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
                                 <div class="jp-type-single">
                                     <div class="jp-gui jp-interface">
-                                    
                                         <div class="jp-controls">
                                             <button class="jp-play" role="button" tabindex="0">play</button>
                                             <button class="jp-stop" role="button" tabindex="0">stop</button>
@@ -519,7 +542,7 @@
                         <h4>----我的小游戏<span class='glyphicon glyphicon-piggy-bank'></span></h4>
                     </div>
                     <div class='col-md-1 pull-right'>
-                        <h5><a href="">更多</a></h5>
+                        <h5><a href=""  class='more'>更多</a></h5>
                     </div>
                 </div>
             </div>
@@ -536,8 +559,12 @@
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-5 col-md-offset-1'>
-                <h4><a href="resume.html">----详细简历</a></h4>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class='row'>
+                    <div class='col-md-2 pull-right'>
+                        <h5><a href=""  class='more pull-right'>详细简历</a></h5>
+                    </div>
+                </div>
             </div>
         </div>
         <div class='row'>
@@ -553,238 +580,6 @@
 <script type="text/javascript" src='js/jquery.jplayer.js'></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-window.onload = function() {
-    //照片墙代码部分
-    var oDiv1 = document.getElementById('show');
-    var oDiv = oDiv1.getElementsByTagName('div');
-    var oNear;
-
-    var aLeft = new Array();
-    var aTop = new Array();
-    var iMinzindex = 2;
-
-    // var oPlayerHeight=$('.jp-type-single');
-    // var oList=document.getElementById('song');
-
-    // console.log(oPlayerHeight);//读不到
-    // oList.style.height=oPlayerHeight.offsetWidth+'px';
-
-    for (i = 0; i < oDiv.length; i++) //把div当前的位置存到数组中 布局转换，把文档流定位转化为绝对定位
-    {
-        aLeft[i] = oDiv[i].offsetLeft;
-        aTop[i] = oDiv[i].offsetTop;
-
-    }
-
-    for (var i = oDiv.length - 1; i >= 0; i--) {
-        oDiv[i].style.left = aLeft[i] + 'px';
-        oDiv[i].style.top = aTop[i] + 'px';
-        oDiv[i].style.position = 'absolute'; //绝对定位一定要写
-        oDiv[i].index = i;
-    };
-
-    for (var i = oDiv.length - 1; i >= 0; i--) {
-        setDrag(oDiv[i]);
-    }
-
-    function setDrag(obj) {
-
-        obj.onmousedown = function(ev) {
-            obj.style.zIndex = iMinzindex++; //使得当前点击的div永远显示在最上层
-
-            var oEvent = ev || event;
-            var disX = oEvent.clientX - obj.offsetLeft;
-            var disY = oEvent.clientY - obj.offsetTop;
-            document.onmousemove = function(ev) {
-                var oEvent = ev || event;
-                obj.style.left = oEvent.clientX - disX + 'px';
-                obj.style.top = oEvent.clientY - disY + "px";
-                for (i = 0; i < oDiv.length; i++) {
-                    oDiv[i].className = '';
-                }
-                oNear = findNearest(obj); //检测碰撞，并且找到最近的碰撞
-                if (oNear) {
-                    oNear.className = 'active1'; //最近的被碰的加边框，不要用active命名，因为bootstrap里面有active类，会覆盖                   
-                }
-            }
-            document.onmouseup = function() { //给document加事件是防止鼠标移出div
-                document.onmousemove = null;
-                document.onmouseup = null;
-
-                var oNear = findNearest(obj);
-                if (oNear) //如果碰撞 交换位置
-                {
-                    oNear.style.zIndex = iMinzindex++;
-                    obj.style.zIndex = iMinzindex++;
-                    //不用运动框架来做div运动效果，因为开定时器，不会清，会出现抖动现象（在定时器没清时又点击，会再次开启一个定时器，所以抖动，但是没解决了，运动框架见xxphotowall。html）                   
-                    $(obj).animate({
-
-                            left: aLeft[oNear.index],
-                            top: aTop[oNear.index]
-                        },
-                        500);
-                    $(oNear).animate({
-                            left: aLeft[obj.index],
-                            top: aTop[obj.index]
-                        },
-                        500);
-                    oNear.className = '';
-                    //以上为jquery的animate（）方法，但是jquery的对象才能调用jquery的方法，所以用$()来包起DOM元素，使之成为jquery的对象
-
-                    //交换索引值， 位置交换，索引值也要交换，否则div1移动到div2时仍认为自己是div1
-                    var tmp = 0;
-                    tmp = obj.index;
-                    obj.index = oNear.index;
-                    oNear.index = tmp;
-                } else { //没碰撞
-                    $(obj).animate({
-                            left: aLeft[obj.index],
-                            top: aTop[obj.index]
-                        },
-                        500);
-                }
-            }
-            return false; //禁止浏览器默认行为，在mousedown里面
-        }
-    }
-
-    function colTest(obj1, obj2) { //碰撞检测函数
-        var l1 = obj1.offsetLeft;
-        var r1 = obj1.offsetLeft + obj1.offsetWidth;
-        var t1 = obj1.offsetTop;
-        var b1 = obj1.offsetTop + obj1.offsetHeight;
-
-        var l2 = obj2.offsetLeft;
-        var r2 = obj2.offsetLeft + obj2.offsetWidth;
-        var t2 = obj2.offsetTop;
-        var b2 = obj2.offsetTop + obj2.offsetWidth;
-
-        if (r1 < l2 || l1 > r2 || b1 < t2 || t1 > b2) //碰不上
-        {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    //以下为找到所有碰撞中最近的那个div，其实当时没写找最近时也不会给碰到的都加框，只会给第一个碰到的加框，直到碰不到状态
-    function findNearest(obj) {
-        var iMin = 999999;
-        var iMinindex = -1;
-        for (var i = oDiv.length - 1; i >= 0; i--) {
-            if (obj == oDiv[i]) {
-                continue;
-            } //这句话很重要！一定要判断是否跟自己碰撞，否则会出问题
-            if (colTest(obj, oDiv[i])) {
-                var dis = getDis(obj, oDiv[i]);
-                if (dis < iMin) {
-                    iMin = dis;
-                    iMinindex = i;
-                }
-
-            }
-        };
-        if (iMinindex == -1) {
-            return null;
-        } else {
-            return oDiv[iMinindex];
-        }
-
-    }
-
-    function getDis(obj1, obj2) {
-            var disX = obj1.offsetLeft - obj2.offsetLeft;
-            var disY = obj1.offsetTop - obj2.offsetTop;
-            var distance = Math.sqrt(disX * disX + disY * disY);
-            return distance;
-        }
-        //异步加载日志列表部分代码
-
-    $.ajax({
-            url: 'blogdiary.json',
-            type: 'GET',
-            dataType: 'json',
-
-        })
-        .done(function(list) {
-            console.log("success", list);
-            $('.panel-body').append("<table class='table table-bordered' id='diarytable'></table>"); //用类取没取到。咋回事
-            $('#diarytable').append('<tr><td>编号</td><td>日志名称</td><td>时间</td></tr>')
-            for (t = 0; t < list.diarylist.length; t++) {
-                $('#diarytable').append("<tr><td>" + list.diarylist[t].number + "</td><td><a href='diary.html'>" + list.diarylist[t].title + "</a></td><td>" + list.diarylist[t].time + "</td></tr>"); //变量不能用双引号引上，一定是标签用双引号引上,注意双引号和单引号区分开，标签双引号，属性单引号
-            }
-        })
-
-    //音乐播放插件代码
-    var arr = ['music/tomorrow.mp3', 'music/moon.mp3', 'music/songbie.mp3', 'music/fly.mp3', 'music/cloud.mp3', 'music/hand.mp3', 'music/river.mp3', 'music/flower.mp3'];
-    var musicname = ['明天你好 &nbsp演唱:小雪 小杜', '半个月亮爬上来 &nbsp演唱:小雪 小杜', '送别 &nbsp演唱:小雪 小杜', '我要的飞翔 &nbsp演唱:小雪', '风中有朵雨做的云 &nbsp演唱:小雪', '大手拉小手 &nbsp演唱:小雪 小杜', '外婆的澎湖湾 &nbsp演唱:小雪 小杜', '夜来香 &nbsp演唱:小雪 小杜'];
-    var oListen = document.getElementsByClassName('music-feng');
-    var oListenImg = document.getElementsByClassName('listen-feng')[0];
-    var arrImg = ['img/music-list/1.jpg', 'img/music-list/2.jpg', 'img/music-list/3.jpg', 'img/music-list/4.jpg', 'img/music-list/5.jpg', 'img/music-list/6.jpg', 'img/music-list/7.jpg', 'img/music-list/8.jpg'];
-    var oPrevious = document.getElementsByClassName('jp-previousxt');
-    var oNext = document.getElementsByClassName('jp-next');
-    console.log(oNext);
-    $("#jquery_jplayer_1").jPlayer({
-        // var that = this;
-        ready: function(event) {
-            $("#jquery_jplayer_1").jPlayer("setMedia", {
-                title: musicname[0],
-                // m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-                // oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-                mp3: arr[0]
-
-            });
-
-            for (x = 0; x < oListen.length; x++) {
-                oListen[x].index = x;
-                oListen[x].onclick = function() {
-                    for(y=0;y<oListen.length;y++)
-                    {
-                        $(oListen[y]).css('outline', '');
-                    }
-                    var that = this;
-                    $(this).css('outline', '3px solid pink');
-                    oListenImg.src = arrImg[this.index];
-
-                    $("#jquery_jplayer_1").jPlayer("setMedia", {
-                        title: musicname[this.index],
-                        // m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-                        // oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-                        mp3: arr[this.index]
-
-                    }).jPlayer('play');
-                }
-            }
-        },
-        swfPath: "js",
-        supplied: "m4a, oga,mp3",
-        wmode: "window",
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: true,
-        keyEnabled: true,
-        remainingDuration: true,
-        toggleDuration: true
-    });
-
-    //照片点赞部分代码
-
-    var oLove = document.getElementsByClassName('glyphicon glyphicon-heart love');
-    var oLoveNum = document.getElementsByClassName('badge lovenum');
-    for (var p = 0; p < oLove.length; p++) {
-        oLove[p].index = p;
-        oLove[p].onclick = function() {
-            oLoveNum[this.index].innerHTML = parseInt(oLoveNum[this.index].innerHTML) + 1;
-            localStorage.setItem(this.index, oLoveNum[this.index].innerHTML);
-        }
-        if (!localStorage.getItem(p)) {
-            oLoveNum[p].innerHTML = 20;
-        } else {
-            oLoveNum[p].innerHTML = localStorage.getItem(p);
-        }
-    }
-}
-</script>
+<script src='blog.js'></script>
 
 </html>

@@ -9,6 +9,8 @@
     <title>我的日志</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="" id='theme-link'>
+    <link rel="stylesheet" type="text/css" href="" id='theme-link-ori'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,16 +22,7 @@
         margin-top: 18px;
     }
     
-    .box1 {
-        width: 100%;
-        height: 749px;
-        margin: 0px;
-        padding: 0px;
-        z-index: -1;
-        background: url(img/b4.jpg);
-    }
-    
-    .sbj {
+     .sbj {
         padding-top: 30px;
     }
     
@@ -40,10 +33,14 @@
     a {
         cursor: pointer;
     }
+    
+html{
+    overflow-y:hidden;
+}
     </style>
 </head>
 
-<body style='padding-top:50px;'>
+<body>
     <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
         <div class="container">
             <div class='navbar-header' style='width:150px;'>
@@ -63,7 +60,7 @@
     </nav>
     <div class='box1'>
         <div class="container">
-            <div class="row">
+            <div class="row" style='margin-top:50px;'>
                 <div class="col-md-3 sbj" style='padding-left:0px;padding-right:0px;'>
                     <div class="row">
                         <div class="col-md-10">
@@ -101,78 +98,7 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-window.onload = function() {
-    var oBack = document.getElementsByClassName('pull-right back-color');
-    var oLi = document.getElementsByClassName('list-group-item');
-    $.ajax({ //加载日志列表
-            url: 'diarylist.json',
-            type: 'GET',
-            dataType: 'json',
-
-        })
-        .done(function(dylist) {
-            console.log("success");
-
-            for (j = 1; j < dylist.list.length; j++) {
-                $('.list-group').append("<li class='list-group-item'><a class='file-name'>" + dylist.list[j - 1].name + "</a></li>"); //append在所选元素的内部，追加内容
-               var oFileName = document.getElementsByClassName('file-name');
-               oFileName[0].style.fontWeight=700;
-            };
-
-        })
-    $.ajax({ //加载日志内容，即日志面板里的内容，这里为初始界面，即显示第一篇日志
-            url: 'diary.json',
-            type: 'GET',
-            dataType: 'json',
-        })
-        .done(function(file) {
-            console.log("success");
-            $('#diary-head').html(file.diary[0].name);
-            $('.panel-body').append("<div style='height:570px;overflow:auto;padding:10px;padding-left:18px;' class='diary-back'><p id='content'>" + file.diary[0].content + "</p></div>");
-            var oDiaryBack = document.getElementsByClassName('diary-back')[0];
-            if (localStorage.getItem(21) == null) {//判断localstorage21是否存在，若不存在，则给日志赋予背景
-                oDiaryBack.style.background = 'url(img/diary-back/1.jpg)';
-            } 
-            else {
-                oDiaryBack.style.background = localStorage.getItem(21);
-            }
-            for (n = 0; n < oBack.length; n++) { //所有的日志背景都是一样的
-                oBack[n].index = n;
-                var oDiaryBack = document.getElementsByClassName('diary-back')[0];
-                oBack[n].onclick = function() {
-                    if (this == oBack[5]) {
-                        oDiaryBack.style.background = 'white';
-                    } else {
-                        oDiaryBack.style.background = 'url(img/diary-back/' + (oBack.length - this.index - 2) + '.jpg)';
-                    }
-                    localStorage.setItem(21, oDiaryBack.style.background);
-                }
-            }
-            for (m = 1; m < oLi.length; m++) //序号为0的是日志列表的表头,该循环为点击列表里的日志名称，会相应的在日志面板里面显示日志内容
-            {
-                oLi[m].index = m - 1;
-                var oFileName = document.getElementsByClassName('file-name');
-                oLi[m].onclick = function() {
-                    var that = this; //必须要把当前的this存下来，不能再下面ajax中直接用this
-                    for (p = 0; p < oFileName.length; p++) {
-                        oFileName[p].style.fontWeight = 400;
-                    }
-                    oFileName[this.index].style.fontWeight = 700;
-                    $.ajax({
-                            url: 'diary.json',
-                            type: 'GET',
-                            dataType: 'json',
-                        })
-                        .done(function(file) {
-                            console.log("success");
-                            $('#diary-head').html(file.diary[that.index].name);
-                            $('#content').html(file.diary[that.index].content);
-                        })
-                }
-            }
-        })
-}
-</script>
+<script src='blog.js'></script>
+<script src='diary.js'></script>
 
 </html>

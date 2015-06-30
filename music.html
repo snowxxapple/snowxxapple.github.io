@@ -9,6 +9,8 @@
     <title>我的音乐</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="" id='theme-link'>
+    <link rel="stylesheet" type="text/css" href="" id='theme-link-ori'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,14 +22,7 @@
         margin-top: 18px;
     }
     
-    .box1 {
-        width: 100%;
-        height: 749px;
-        margin: 0px;
-        padding: 0px;
-        z-index: -1;
-        background: url(img/b4.jpg);
-    }
+    
     
     .sbj {
         padding-top: 30px;
@@ -47,19 +42,26 @@
         position: absolute;
         z-index: 1;
         width: 100%;
-       }
+    }
     
     .listen {
         cursor: pointer;
     }
-    html{
-        overflow-y:hidden;
+    
+    html {
+        overflow-y: hidden;
     }
+    
+    .musicName {
+        color: #337AB7;
+    }
+
+
     </style>
 </head>
 
-<body style='padding-top:50px;'>
-    <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
+<body>
+    <nav class='navbar navbar-default navbar-fixed-top' role='navigation' id='back'>
         <div class="container">
             <div class='navbar-header' style='width:150px;'>
                 <img src="img/1.jpg" class='img-circle navbar-brand' style='padding:0px'>
@@ -76,7 +78,7 @@
     </nav>
     <div class='box1'>
         <div class="container">
-            <div class="row">
+            <div class="row"  style='margin-top:50px;'>
                 <div class="col-md-3 col-lg-3 sbj" style='padding-left:0px;padding-right:0px;'>
                     <div class="row">
                         <div class="col-md-12 col-lg-10">
@@ -85,58 +87,58 @@
                                     <h5><strong>音乐列表</strong><span class='badge' style='background:#cce;margin-left:10px;'>9</span></h5>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>明天你好</span>
+                                    <span class='musicName'>明天你好</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>半个月亮爬上来</span>
+                                    <span class='musicName'>半个月亮爬上来</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>送别</span>
+                                    <span class='musicName'>送别</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>我要的飞翔</span>
+                                    <span class='musicName'>我要的飞翔</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>风中有朵雨做的云</span>
+                                    <span class='musicName'>风中有朵雨做的云</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>大手拉小手</span>
+                                    <span class='musicName'>大手拉小手</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>外婆的澎湖湾</span>
+                                    <span class='musicName'>外婆的澎湖湾</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>夜来香</span>
+                                    <span class='musicName'>夜来香</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <span>没时间</span>
+                                    <span class='musicName'>没时间</span>
                                     <span class='lovenum pull-right'>20</span>
                                     <a><span class="glyphicon glyphicon-heart love pull-right" style='margin-left:5px;'></span></a>
-                                    <a class='pull-right listen'><span class="glyphicon glyphicon-headphones"></span>试听</a>
+                                    <a class='pull-right listen' style='text-decoration:none;'><span class="glyphicon glyphicon-headphones"></span>试听</a>
                                 </li>
                                 <li class='list-group-item' style='height:57px;'>
                                     <ul class='pager' style='margin-top:2px;'>
@@ -145,21 +147,20 @@
                                     </ul>
                                 </li>
                             </ul>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-md-offset-1 col-lg-9 col-lg-offset-0 sbj">
                     <div class="row">
-                        <div class="panel panel-default" style='width:100%;'>
+                        <div class="panel panel-default music-panel" style='width:100%;'>
                             <div class="row">
                                 <div class="col-md-8 col-lg-7" style='padding:15px;'>
                                     <div style='width:100%;margin-left:15px;vertical-align:middle;'>
                                         <!-- 直接添加图片，列的高度不包含图片是怎么回事 -->
                                         <img src="img/musicimg1/1.jpg" class='img box2 img-rounded' style='width:100%;'>
-                                        <img src="img/musicimg1/2.jpg" class='img box2 img-rounded'style='width:100%;'>
-                                        <img src="img/musicimg1/3.jpg" class='img box2 img-rounded'style='width:100%;'>
-                                        <img src="img/musicimg1/4.jpg" class='img box2 img-rounded'style='width:100%;'>
+                                        <img src="img/musicimg1/2.jpg" class='img box2 img-rounded' style='width:100%;'>
+                                        <img src="img/musicimg1/3.jpg" class='img box2 img-rounded' style='width:100%;'>
+                                        <img src="img/musicimg1/4.jpg" class='img box2 img-rounded' style='width:100%;'>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-lg-5" style='padding-top:20px;padding-left:10px;'>
@@ -215,24 +216,36 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src='blog.js'></script>
 <script type="text/javascript">
 //淡入淡出效果
-$(function() { //淡入淡出效果。jquery实现
-    $(".box2").fadeOut(0).eq(0).fadeIn(0); //先隐藏所有图片，再将对象移到第一张图片，使之淡入
-    var i = 0; //初始化图片的索引值
-    setInterval(function() { //setInterval是每隔一段时间循环一个动作
-        if ($(".box2").length > (i + 1)) { //判断是否执行到最后一张图片
-            $(".box2").eq(i).fadeOut(5000).next("img").fadeIn(5000);
+var timer = null;
+$(document).ready(function() {
+    clearInterval(timer);
 
-            //索引值为i的图片淡出，它的下一张图片淡入
-            i++; //使索引值增加1，下一次执行动作的图片索引值为i+1，
-        } else { //如果为最后一张图片，将执行下面的代码
-            $(".box2").eq(i).fadeOut(5000);
-            $('.box2').eq(0).fadeIn(5000); //索引值为i的图片淡出，这里不同于上面，是第一张图片淡入
-            i = 0; //将索引值变为0，回到初始状态
+    jQuery.extend({
+        fade: function() { //淡入淡出效果。jquery实现
+            $(".box2").fadeOut(0).eq(3).fadeIn(0); //先隐藏所有图片，再将对象移到第一张图片，使之淡入
+            $('.box2').eq(3).fadeOut(5000);
+            $('.box2').eq(0).fadeIn(5000);
+            var i = 0; //初始化图片的索引值
+            timer = setInterval(function() { //setInterval是每隔一段时间循环一个动作
+                if (i+1<$(".box2").length) { //判断是否执行到最后一张图片
+                    $(".box2").eq(i).fadeOut(5000).next("img").fadeIn(5000);
+
+                    //索引值为i的图片淡出，它的下一张图片淡入
+                    i++; //使索引值增加1，下一次执行动作的图片索引值为i+1，
+                } else { //如果为最后一张图片，将执行下面的代码
+                    $(".box2").eq(i).fadeOut(5000);
+                    $('.box2').eq(0).fadeIn(5000); //索引值为i的图片淡出，这里不同于上面，是第一张图片淡入
+                    i = 0; //将索引值变为0，回到初始状态
+                }
+            }, 5000); //5000ms执行一次淡入淡出的动作
         }
-    }, 5000); //5000ms执行一次淡入淡出的动作
-})
+    });
+    $.fade();
+});
+
 
 window.onload = function() {
     //点击试听时，更换照片，并且更换对应的点赞数，点赞只有在试听后才可以，而且只能给当前的歌曲点赞
@@ -246,19 +259,34 @@ window.onload = function() {
     var oName = document.getElementsByClassName('name')[0];
     var oActor = document.getElementsByClassName('actor')[0];
     var oGeci = document.getElementsByClassName('geci')[0];
+    var oMusicName = document.getElementsByClassName('musicName');
     var aName = ['歌曲名: 明天你好', '歌曲名: 半个月亮爬上来', '歌曲名: 送别', '歌曲名: 我要的飞翔', '歌曲名: 风中有朵雨做的云', '歌曲名: 大手拉小手', '歌曲名: 外婆的澎湖湾', '歌曲名: 夜来香', '歌曲名: 没时间'];
     var aActor = ['演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪', '演唱者: 小雪', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜', '演唱者: 小雪 小杜'];
     var aGeci = ['看昨天的我们 走远了 在命运广场中央 等待 那模糊的 肩膀 越奔跑 越渺小 曾经 并肩往前的 伙伴 在举杯 祝福后都 走散 只是那个 夜晚 我深深 的都留藏在心坎 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着 奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 勇敢是什么 当我朝着反方向走去 在楼梯的角落 找勇气 抖着肩膀 哭泣 问自己 在哪里 曾经 并肩往前 的伙伴 沉默着 懂得我的委屈 时间它总说谎 我从 不曾失去 那些肩膀 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 长大以后 我只能奔跑 我多害怕 黑暗中跌倒 明天你好 含着泪微笑 越美好 越害怕得到 每一次哭 又笑着奔跑 一边失去 一边在寻找 明天你好 声音多渺小 却提醒我 勇敢是什么', '半个月亮爬上来 咿啦啦 爬上来 照着我的姑娘梳妆台 咿啦啦 梳妆台 请你把那纱窗快打开 咿啦啦 快打开 咿啦啦 快打开 再把你那玫瑰摘一朵 轻轻的 扔下来 再把你那玫瑰摘一朵 轻轻的 扔下来 半个月亮爬上来 咿啦啦 爬上来 为什么我的姑娘不出来 咿啦啦 不出来 请你把那纱窗快打开 咿啦啦 快打开 咿啦啦 快打开 再把你那玫瑰摘一朵   轻轻的 扔下来 再把你那玫瑰摘一朵 轻轻的 扔下来 ', '长亭外,古道边,芳草碧连天 晚风拂柳笛声残,夕阳山外山 天之涯,地之角,知交半零落 人生难得是欢聚,唯有别离多 长亭外,古道边,芳草碧连天 问君此去几时还,来时莫徘徊 天之涯,地之角,知交半零落 一壶浊洒尽余欢,今宵别梦寒', '天气冷暖不确定 每个人躲在人海里 相遇总是没道理 弄错后轻轻说对不起 没关系不论失去了什么 都没痕迹 每一次让泪水流回心里 去灌溉梦想开出奇迹 我要的坚强不是谁的肩膀 怀抱是个不能停留的地方 这世界多拥挤就有多匆忙 用所有的寂寞时光给自己鼓掌 我要的飞翔不是借双翅膀 自由是个不能代替的远方 用旅途的孤单来收获成长 直到遇见了你一起分享 没关系不论失去了什么 都没痕迹 每一次让泪水流回心里 去灌溉梦想开出奇迹 我要的坚强不是谁的肩膀 怀抱是个不能停留的地方 这世界多拥挤就有多匆忙 用所有的寂寞时光给自己鼓掌 我要的飞翔不是借双翅膀 自由是个不能代替的远方 用旅途的孤单来收获成长 直到遇见了你一起分享 我要的飞翔不是借双翅膀 自由是个不能代替的远方 用旅途的孤单来收获成长 直到遇见了你一起分享 ', '风中有朵雨做的云 一朵雨做的云 云的心里全都是雨 滴滴全都是你 风中有朵雨做的云 一朵雨做的云 云在风里伤透了心 不知又将吹向哪儿去 吹啊吹吹落花满地 找不到一丝丝怜惜 飘啊飘飘过千万里 苦苦守候你的归期 每当天空又下起了雨 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 风中有朵雨做的云 一朵雨做的云 云在风里伤透了心 不知又将吹向哪儿去 吹啊吹吹落花满地 找不到一丝丝怜惜 飘啊飘飘过千万里 苦苦守候你的归期 每当天空又下起了雨 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 吹啊吹吹落花满地 找不到一丝丝怜惜 飘啊飘飘过千万里 苦苦守候你的归期 每当天空又下起了雨 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 每当心中又想起了你 风中有朵雨做的云 ', '还记得那场音乐会的烟火 还记得那个凉凉的深秋 还记得人潮把你推向了我 游乐园拥挤的正是时候 一个夜晚坚持不睡的等候 一起泡温泉奢侈的享受 有一次日记里愚蠢的困惑 因为你的微笑幻化成风 你大大的勇敢保护着我 我小小的关怀喋喋不休 感谢我们一起走了那么久 又一起回到凉凉深秋 给你我的手 像温柔野兽 把自由交给草原的辽阔 我们小手拉大手 一起交游 今天别想太多 你是我的梦 像北方的风 却正能帮我悠扬的哀愁 我们小手拉大手 今天加油向昨天挥挥手 LALALA 给你我的手 像温柔野兽 我们一直就这样向前走 我们小手拉大手 一起交游 今天别想太多 LALALALALA 像北方的风 却正南方暖洋洋的哀愁 我们小手拉大手 今天加油向昨天挥挥手 我们小手拉大手 今天为我加油 舍不得挥挥手 ', '晚风轻拂着澎湖湾 白浪逐沙滩 没有椰林醉斜阳 只是一片海蓝蓝 坐在门前的矮墙上 一遍遍幻想 也是黄昏的沙滩上 有着脚印两对半 那是外婆拄着杖 将我手轻轻挽 踩着薄暮走向余晖 暖暖的澎湖湾 一个脚印是笑语一串 消磨许多时光 直到夜色吞没我俩 在回家的路上 澎湖湾澎湖湾 外婆的澎湖湾 有我许多的童年幻想 阳光沙滩海浪仙人掌 还有一位老船长 晚风轻拂着澎湖湾 白浪逐沙滩 没有椰林醉斜阳 只是一片海蓝蓝 坐在门前的矮墙上 一遍遍幻想 也是黄昏的沙滩上 有着脚印两对半 那是外婆拄着杖 将我手轻轻挽 踩着薄暮走向余晖 暖暖的澎湖湾 一个脚印是笑语一串 消磨许多时光 直到夜色吞没我俩 在回家的路上 澎湖湾澎湖湾 外婆的澎湖湾 有我许多的童年幻想 阳光沙滩海浪仙人掌 还有一位老船长', '那南风吹来清凉 那夜莺啼声细唱 月下的花儿都入梦 只有那夜来香 吐露着芬芳 我爱这夜色茫茫 也爱这夜莺歌唱 更爱那花一般的梦 拥抱着夜来香 闻这夜来香 夜来香我为你歌唱 夜来香我为你思量 啊~啊我为你歌唱 我为你思量 la~la~la 夜来香 夜来香 夜来香',
         '突然很想 不去上班 发一发呆 偷一点懒 但是又要 问我自己 是不是要 坚强一点 梦想总是 绕一个圈 却还是要 回到原点 是不是我 还需要再坚强一点 我真的没时间 没时间 吃一顿早餐 我没时间 没时间 去锻炼锻炼 我没时间 没时间 逛一逛商店 我没时间 没时间 真的没有时间 我没时间 没时间 谈一谈恋爱 我没时间 没时间 常回家看看 我没时间 没时间 我有一点烦 为什么总是 没有时间 我越来越 怀念从前 无忧无虑 美好童年 但是又要 告诉自己 是不是要 坚强一点 我只剩下 空空的口袋 我只好在 原地发呆 这个世界 变化的太快 我要怎么 画出未来 我只剩下 空空的口袋 我只好在 原地发呆 这个世界 变化的太快 我想不明白 梦想总是 绕一个圈 却还是要 回到原点 是不是我 还需要再坚强一点 我真的没时间 没时间 吃一顿早餐 我没时间 没时间 去锻炼锻炼 我没时间 没时间 逛一逛商店 我没时间 没时间 真的没有时间 我没时间 没时间 谈一谈恋爱 我没时间 没时间 常回家看看 我没时间 没时间 我有一点烦 为什么总是 没有时间 我越来越 怀念从前 无忧无虑 美好童年 但是又要 告诉自己 是不是要 坚强一点 我只剩下 空空的口袋 我只好在 原地发呆 这个世界 变化的太快 我要怎么 画出未来 我只剩下 空空的口袋 我只好在 原地发呆 这个世界 变化的太快 我想不明白'
     ];
+
+if(localStorage.getItem(30)==1)
+ {
+    $('#theme-link').attr('href', '');
+    $('#theme-link-ori').attr('href','css/blog-ori.css');
+ }
+ if(localStorage.getItem(30)==2)
+ {
+     $('#theme-link').attr('href', 'css/blog.css');
+     $('#theme-link-ori').attr('href','');
+ }
+
     for (var i = 0; i < oListen.length; i++) {
         oListen[i].index = i; //给试听按钮加索引值 
         oListen[i].onclick = function() {
-            oAudio.src = arr[this.index];            
+            oAudio.src = arr[this.index];
             oAudio.autoplay = 'autoplay';
+            $(oMusicName).css('font-weight', 400);
+            $(oMusicName[this.index]).css('font-weight', 700);
             oName.innerHTML = aName[this.index];
             oActor.innerHTML = aActor[this.index];
-            oGeci.innerHTML = aGeci[this.index];            
+            oGeci.innerHTML = aGeci[this.index];
             for (var m = 0; m < oImg.length; m++) {
                 oImg[m].src = 'img/musicimg1/' + (4 * this.index + m + 1) + '.jpg'; //更换图片
             };
@@ -268,14 +296,14 @@ window.onload = function() {
         oIcon[j].index = j;
         oIcon[j].onclick = function() {
             oNum[this.index].innerHTML = parseInt(oNum[this.index].innerHTML) + 1;
-            localStorage.setItem(this.index+12, oNum[this.index].innerHTML);
+            localStorage.setItem(this.index + 12, oNum[this.index].innerHTML);
         }
     };
     for (k = 0; k < oIcon.length; k++) { //读取键值对中的数值
-        if (!localStorage.getItem(k+12)) {//由于我的相册有12个所以从12号起开始存储我的音乐的点赞数
+        if (!localStorage.getItem(k + 12)) { //由于我的相册有12个所以从12号起开始存储我的音乐的点赞数
             oNum[k].innerHTML = 20;
         } else {
-            oNum[k].innerHTML = localStorage.getItem(k+12);
+            oNum[k].innerHTML = localStorage.getItem(k + 12);
         }
     }
 }

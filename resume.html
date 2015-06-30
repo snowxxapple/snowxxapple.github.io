@@ -9,6 +9,8 @@
     <title>我的简历</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="" id='theme-link'>
+    <link rel="stylesheet" type="text/css" href="" id='theme-link-ori'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,18 +22,11 @@
         margin-top: 18px;
     }
     
-    .box1 {
-        width: 100%;
-        height: 749px;
-        margin: 0px;
-        padding: 0px;
-        z-index: -1;
-        background: url(img/b4.jpg);
-    }    
+    
     </style>
 </head>
 
-<body style='padding-top:50px;'>
+<body>
     <nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
         <div class="container">
             <div class='navbar-header' style='width:150px;'>
@@ -56,6 +51,20 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-
+<script src='blog.js'></script>
+<script type="text/javascript">
+window.onload=function(){
+    if(localStorage.getItem(30)==1)
+ {
+    $('#theme-link').attr('href', '');
+    $('#theme-link-ori').attr('href','css/blog-ori.css');
+ }
+ if(localStorage.getItem(30)==2)
+ {
+     $('#theme-link').attr('href', 'css/blog.css');
+     $('#theme-link-ori').attr('href','');
+ }
+}
+</script>
 
 </html>
