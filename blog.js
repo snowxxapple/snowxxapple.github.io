@@ -10,8 +10,9 @@
 
      
      var theme = localStorage.getItem(30); //更换主题部分
-     if(!localStorage.getItem(30))//如果30号里面没有值，那么默认设为主题二
+     if(localStorage.getItem(30)==null)//如果30号里面没有值，那么默认设为主题二
      {
+         localStorage.setItem(30,2);
          $('#theme-link').attr('href', 'css/blog.css');
          $('#theme-link-ori').attr('href','');
      }
